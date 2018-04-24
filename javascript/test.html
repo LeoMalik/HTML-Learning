@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="testjs.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+</head>
+<body>
+	
+    <button onclick="document.getElementById('text').style.display='none'">不显示</button>
+    <button onclick="document.getElementById('text').style.display='block'">显示</button>
+    <p id="text">这是一段文本</p>
+    <div class="cal" >
+		<input type="text" class="form-control" id="firstnum" style="width: 160px">
+		+
+		<input type="text" class="form-control" id="secondnum" style="width: 160px">
+		=
+		<input type="text" class="form-control" id="result" style="width: 160px">
+		<button class="btn-default" onclick="get()">运算</button>
+	</div>
+
+    <div class="container">
+        <div class="row" >
+            <div class="col-lg-4">
+                <div class="input-group">
+                    <span class="input-group-addon">地名</span>
+                    <input type="text" class="form-control" value="浙江" id="place">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="input-group">
+                    <span class="input-group-addon">公司类型</span>
+                    <input type="text" class="form-control" value="互联网公司" id="company">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="input-group">
+                    <span class="input-group-addon">公司名称</span>
+                    <input type="text" class="form-control" value="阿里九九" id="">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="input-group">
+                    <span class="input-group-addon">老板姓名:</span>
+                    <input type="text" class="form-control" value="九九">
+                </div>
+            </div>
+        </div>
+        <div class="content" align="center">
+            <button class="btn btn-default" onclick="getText()">生成</button>
+            <textarea class="form-control" cols="30" rows="10" id="result1">
+            </textarea>
+        </div>
+    </div>
+    <div id="dropDownMenu">
+        <span onmouseover="showmenu('1')" onmouseleave="hidemenu()">武器1</span>
+        <span onmouseover="showmenu('2')" onmouseleave="hidemenu()">武器2</span>
+        <span onmouseover="showmenu('3')" onmouseleave="hidemenu()">武器3</span>
+
+            <ul class="menu menu1">
+                <li><a href="#nowhere"> 大剑 </a></li>
+                <li><a href="#nowhere"> 屠龙 </a></li>
+                <li><a href="#nowhere"> 倚天 </a></li>
+                <li><a href="#nowhere"> 七孔砖 </a></li>
+            </ul>
+
+
+            <ul class="menu menu2">
+                <li><a href="#nowhere"> 大剑2 </a></li>
+                <li><a href="#nowhere"> 屠龙 </a></li>
+                <li><a href="#nowhere"> 倚天 </a></li>
+                <li><a href="#nowhere"> 七孔砖 </a></li>
+            </ul>
+
+
+            <ul class="menu menu3">
+                <li><a href="#nowhere"> 大剑3</a></li>
+                <li><a href="#nowhere"> 屠龙 </a></li>
+                <li><a href="#nowhere"> 倚天 </a></li>
+                <li><a href="#nowhere"> 七孔砖 </a></li>
+            </ul>
+        <div style="height:200px"></div>
+    </div>
+
+</body>
+</html>

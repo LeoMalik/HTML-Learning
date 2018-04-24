@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<button class="btn btn-default ">按钮</button>
+<button class="close"> &times;</button>
+<table class="table table-hover">
+    <thead class="bg-info">
+    <th>头像</th>
+    <th>名字</th>
+    <th>hp</th>
+    </thead>
+    <tbody>
+    <tr >
+        <td><img width="20px" class="img img-circle" src="http://how2j.cn/study/bootstrap/lol/gareen.png"/></td>
+        <td >盖伦</td>
+        <td>616</td>
+    </tr>
+    <tr>
+        <td><img width="20px" src="http://how2j.cn/study/bootstrap/lol/teemo.png"/></td>
+        <td>提莫</td>
+        <td>314</td>
+    </tr>
+    <tr>
+        <td><img width="20px" src="http://how2j.cn/study/bootstrap/lol/akali.png"/></td>
+        <td>阿卡丽</td>
+        <td>414</td>
+    </tr>
+    </tbody>
+</table>
+<div class="dropdownMenu">
+    <button  class="btn btn-primary dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+        选择你的英雄:
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+        <li>盖伦</li>
+        <li>提莫</li>
+        <li>阿卡丽</li>
+    </ul>
+</div>
+<button onclick="document.getElementById(text).style.display='none'"></button>
+<p id="text"> 这个是一段可以被javascript隐藏的文本</p>
+</body>
+</html>

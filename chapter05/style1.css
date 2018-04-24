@@ -1,0 +1,17 @@
+p span{
+    line-height: 40px;
+    font: bold 18px "楷书";
+    color: #faa53b;
+}
+
+p{
+    line-height: 20px;
+    font-size: 12px ;
+    color: #faa53b;
+
+;
+}
+
+p img{
+    vertical-align: middle;
+}

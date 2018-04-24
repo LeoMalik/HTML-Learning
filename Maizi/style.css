@@ -1,0 +1,280 @@
+/*通用*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 14px;
+    font-family: "微软雅黑",serif;
+}
+.wrap{
+    width: 960px;
+    margin: 0 auto;
+}
+.l{
+    float: left;
+}
+.r{
+    float: right;
+}
+a{
+    text-decoration: none;
+}
+.more{
+    color: red;
+}
+.clearMarign{
+    margin: 0;
+}
+.cl{
+    clear: both;
+}
+
+/*顶部*/
+.top{
+    width: 100%;
+    height: 24px;
+    background: #303030;
+    line-height: 24px;
+}
+.top span{
+    color: #D8D8D8;
+    margin-left: 15px;
+}
+.top a{
+    text-decoration: none;
+    color: #D8D8D8;
+}
+.top a:hover{
+    color: orangered;
+}
+
+/*搜索部分*/
+.logos{
+    margin: 20px 0 10px 0;
+    height: 60px;
+}
+.search{
+    width: 350px;
+    height: 41px;
+    margin-left: 75px;
+    margin-top:9px;
+}
+.logo_l{
+    background: url("images/s_l.jpg") no-repeat;
+    width: 6px;
+    height: 40px;
+}
+.logo_c{
+    background: url("images/s_c.jpg") repeat-x;
+}
+.logo_c input{
+    width: 250px;
+    height: 35px;
+    line-height: 35px;
+    color: #797979;
+}
+.logo_r{
+    background: url("images/s_r.jpg") no-repeat;
+    width: 78px;
+}
+.logo_r button{
+    width: 78px;
+    height: 40px;
+    background: none;
+}
+.calls span{
+    color: darkred;
+    font-size: 26px;
+    height: 60px;
+    line-height: 60px;
+}
+
+/*导航栏*/
+.nav{
+    background: url("images/nav_bg.jpg") repeat-x;
+    width: 100%;
+    height: 39px;
+}
+
+.nav li{
+    list-style: none;
+    float: left;
+    padding: 0 28px;
+    line-height: 39px;
+    height: 39px;
+}
+.nav a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+.nav li:hover{
+    background: darkred;
+}
+
+/*中间部分*/
+.title{
+    margin: 10px 0 10px 0;
+    border-bottom: 1px darkred solid;
+    padding-bottom: 5px;
+    position: relative;
+}
+.title a{
+    text-decoration: none;
+    color: red;
+    float: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+/*产品介绍*/
+.introduce{
+    width: 540px;
+    padding-right: 20px;
+}
+.introduce_content img{
+    float: left;
+    margin: 0 10px 10px 0;
+}
+.introduce p{
+    text-indent: 24px;
+    font-size: 12px;
+    color: #616161;
+}
+/*产品新闻*/
+.news{
+    width: 400px;
+    height: 300px;
+}
+.news_content img{
+    float: left;
+    margin: 0 10px 10px 0;
+}
+.news_content h3{
+    font-weight: normal;
+    font-size: 13px;
+    color: #616161;
+}
+.news_content p{
+    font-size: 12px;
+    color: #888888;
+    height: 66px;
+}
+.news li{
+    list-style: square;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    font-size: 12px;
+    position: relative;
+}
+.news a{
+    color: #616161;
+}
+.news a:hover{
+    color: orangered;
+}
+.news li span{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+/*热销产品*/
+.product{
+    width: 960px;
+}
+.product_content li{
+    margin:0 10px 10px 0 ;
+    list-style: none;
+    float: left;
+    width: 151px;
+    height: 96px;
+    position: relative;
+}
+.product_content .clearMarign{
+    margin-right: 0;
+}
+.product_content li span{
+    height: 20px;
+    width: 130px;
+    padding: 0 10px;
+    background: darkred;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #FFFFFF;
+    text-align: center;
+    display: none;
+}
+.product_content li:hover span{
+    display: block;
+}
+
+/*尾部*/
+.footer{
+    width: 100%;
+    background: darkred;
+    height: 80px;
+}
+.footer_top span{
+    line-height: 80px;
+    height: 80px;
+}
+.footer_top span a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+.footer_top span a:hover{
+    color: orangered;
+}
+.footer_top span:nth-of-type(2){
+    color: #FFFFFF;
+    font-size: 12px;
+}
+.footer_bottom{
+    width: 100%;
+    height: 20px;
+    background: #303030;
+}
+.footer_bottom span a{
+    color: #ACACAC;
+    font-size: 12px;
+    padding-right:5px ;
+}
+.footer_bottom a:nth-of-type(1){
+    color: orangered;
+}
+.footer_bottom a:hover{
+    color: orangered;
+}
+
+.sidebar{
+    position: fixed;
+    bottom: 150px;
+    right: 60px;
+}
+.sidebar li{
+    list-style: none;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+.sidebar a{
+    background: url("images/top_tool.jpg") no-repeat;
+    display: block;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+}
+a.tool_1{
+    background-position: 0 0;
+}
+a.tool_2{
+    background-position: 0 -55px;
+}
+a.tool_3{
+    background-position: 0 -110px;
+}
+a.tool_4{
+    background-position: 0 -165px;
+}

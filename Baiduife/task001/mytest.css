@@ -1,0 +1,79 @@
+
+*{
+	box-sizing: border-box;
+}
+/* 使得每个盒子都为相对布局 */
+.elem{
+	position: relative;
+	border: solid #6AC5AC 3px;
+}
+/* 容器 */
+.container{
+	border: solid #6AC5AC 3px;
+	display: -webkit-flex;
+    display: flex;
+}
+.container>.label{
+	line-height: 1em;
+	background: #6AC5AC;
+	position: absolute;
+}
+
+/* 左侧菜单栏 */
+.menu{
+	/* float: left;
+	width: 25%; */
+	border: 3px solid hotpink;
+	width: 25%;
+}
+.menu ul li{
+	color: hotpink;
+}
+/* 上侧 */
+.section-top{
+	border: #FDC72F 3px solid;
+	/* margin-left: 25%; */
+}
+/* 下侧 */
+.section-bottom{
+	border: #FDC72F 3px solid;
+	/* margin-left: 25%; */
+}
+/* 标签栏 */
+.label{
+	top: 0;
+	left: 0;
+	padding: 0 3px 3px 0;
+}
+
+.menu >.label{
+	background: hotpink;
+	color: white;
+	line-height: 1em;
+	position: absolute
+}
+
+.section-top >.label{
+	background: #FDC72F;
+	position: absolute;
+}
+.section-bottom >.label{
+	background: #FDC72F;
+	position: absolute;
+}
+
+p{
+	margin: 2em;
+}
+
+.section-bottom{
+	background: #eee;
+}
+.flex-column{
+	flex: 1;
+}
+@media screen and (max-width:599px) {
+  nav li {
+    display: inline;
+  }
+}

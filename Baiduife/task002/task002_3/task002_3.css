@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/**
+    显示框
+ */
+.rollImg{
+    width: 200px;
+    height: 400px;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+/**
+图片列表
+ */
+.imgList{
+    width: 1200px;
+    list-style: none;
+    position: absolute;
+}
+.imgList>li{
+    float: left; width: 200px; height: 400px;
+}
+img{
+    width: 200px;
+    height: 400px;
+    display: inline-block;
+}
+
+/**
+选项列表
+ */
+.choiceList{
+    position: absolute;
+    bottom:10px;
+    right: 5px;
+}
+.choiceList li{
+    width: 20px;
+    list-style: none;
+    display: inline-block;
+    background: #666666;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.choiceList .on{
+    background: orangered;
+}
+/**
+左右箭头
+ */
+.arrow_left {
+    position: absolute;
+    font-size: 50px;
+    left: 10px;
+    top: 150px;
+    text-decoration: none;
+    color: #666666;
+}
+.arrow_right{
+    position: absolute;
+    font-size: 50px;
+    right: 10px;
+    top: 150px;
+    text-decoration: none;
+    color: #666666;
+}

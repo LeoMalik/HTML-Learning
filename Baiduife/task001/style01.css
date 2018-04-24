@@ -1,0 +1,87 @@
+h1{
+    color:blue;
+}
+h2{
+    font-size: 14px;
+}
+p{
+    font-size: 12px;
+    color: yellow;
+    background: black;
+    text-transform: uppercase;
+}
+img{
+    border: 2px red solid;
+}
+.box{
+    position: relative;
+}
+.left-box{
+    width: 60px;
+    background: #FF0000;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.right-box{
+    background: #0d7144;
+    margin-left: 60px;
+}
+.down-box{
+    background: #faa53b;
+    width: 100%;
+}
+#box3{
+    margin-top: 60px;
+    background-color: bisque;
+    width: 300px;
+    height: 50px;
+}
+#box4{
+    margin-top: -50px;
+    margin-left: 300px;
+    background-color: #ff0000;
+    height: 50px;
+}
+.box1{
+    float: left;
+    width: 60px;
+    background: #0d7144;
+}
+.box2{
+    margin-left: 60px;
+    background: #faa53b;
+}
+
+/* 三列布局 */
+.box5{
+    background: red;
+    width: 60px;
+    margin-top: 50px;
+}
+
+.box6{
+    background: #faa53b;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: -20.5px;
+}
+.box7{
+    float: right;
+    background: #0d7144;
+    width: 60px;
+    margin-top: -20.5px;
+}
+
+/* girdview自适应 */
+.girdbox {
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    margin: 1em;
+    background: #066666;
+}
+.box-group{
+    
+    margin-top:20px; 
+}

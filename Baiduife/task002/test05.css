@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.news{
+    width: 600px;
+    margin: 80px auto;
+}
+
+li{
+    margin-left: 5px;
+    cursor: pointer;
+    list-style: none;
+    display: inline-block;
+    border: 1px #ccc solid;
+    border-bottom: 0 solid;
+    width: 80px;
+    height: 24px;
+    text-align: center;
+}
+
+#house{
+    border-top: 1px #d01d3b solid;
+    border-bottom: 1px #fff solid;
+}
+.box{
+    border: 1px #ccc solid;
+    margin-top: -1px;
+    border-top: 1px #d01d3b solid;
+    display: none;
+}
+.house{
+    display: block;
+}
+p{
+    padding: 10px;
+    font-size: 13px;
+}

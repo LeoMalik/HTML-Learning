@@ -1,0 +1,58 @@
+#beauty{
+    width:260px;
+    background: white;
+    border: 1px #666666;
+}
+
+body{
+    background-color: #f9fbcb;
+}
+li,p,ul{
+    margin: 0px;
+    padding: 0px;
+}
+#beauty p{
+    background: #e9185a;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 35px;
+    height: 35px;
+    color: white;
+    padding-left: 10px;
+}
+#beauty li{
+    height: 30px;
+    line-height: 30px;
+    font-size: 13px;
+    color: #666666;
+    border-bottom: 1px dotted;
+    padding-left: 2px;
+    list-style: none;
+}
+#beauty a span{
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 50%;
+    text-align: center;
+    background: black;
+}
+#beauty a:hover span{
+    background: #e9185a;
+}
+
+#beauty a{
+    color: #666666;
+    text-decoration: none;
+}
+
+#beauty a:hover{
+    color: #e9185a;
+    text-decoration: underline;
+}
+

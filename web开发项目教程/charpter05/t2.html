@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        th{
+            border: 0;
+        }
+        td{
+            border: 0;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        table tr:nth-of-type(1){
+            display: block;
+            background: #FFA500;
+            width: 550px;
+            height:50px;
+        }
+        .left{
+            display: block;
+            float: left;
+            background: #FFD700;
+            width: 150px;
+            height: 400px;
+        }
+        table td:nth-of-type(2){
+            display: block;
+            height: 400px;
+            background: #EEEEEE;
+        }
+        .footer{
+            background: #FFA500;
+            width: 550px;
+            line-height: 50px;
+            height: 50px;
+            clear: both;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th colspan="2"><h2>主要的网页标题</h2></th>
+        </tr>
+        <tr>
+            <td class="left">
+                <ul>
+                    <li>菜单</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </td>
+            <td>
+                内容在这里
+            </td>
+        </tr>
+        <tr class="footer">
+            <td>版权@ XXX.com</td>
+        </tr>
+    </table>
+</body>
+</html>

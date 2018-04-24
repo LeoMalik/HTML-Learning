@@ -1,0 +1,30 @@
+body{
+    padding: 10px;
+}
+h1{
+    text-shadow: black 2px 2px 2px;
+    text-align: center;
+}
+h2{
+    color: darkgray;
+    text-align: center;
+}
+p {
+    text-indent: 2em;
+    color: #333;
+    line-height: 1.8;
+    font-size: 14px;
+    font-family: arial, "宋体";
+}
+.time{
+    text-align: center;
+}
+.second{
+    color: #FF0000;
+}
+.book{
+    text-align: center;
+}
+.daoyu{
+    font-style: italic;
+}

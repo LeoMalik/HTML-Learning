@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        td{
+            border: 1px solid #666666;
+            padding: 5px;
+        }
+    </style>
+    <script>
+        function getIntValue(id){
+            return parseInt(document.getElementById(id).value);
+        }
+        function cal() {
+            var initMoney= getIntValue("initMoney");
+            var rate= getIntValue("rate");
+            var year= getIntValue("year");
+            var sum1 = (year-1)*rate+initMoney;
+            document.getElementById("sum1").value=sum1;
+        }
+
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>起始资金</td>
+            <td><input type="text" id="initMoney" value="0">元</td>
+        </tr>
+        <tr>
+            <td>每日收益</td>
+            <td><input type="text" id="rate" value="0">%</td>
+        </tr>
+        <tr>
+            <td>复利年数</td>
+            <td><input type="text" id="year" value='1'> 年</td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><input type="button" value="计算" onclick="cal()"></td>
+        </tr>
+        <tr>
+            <td>本金和</td>
+            <td><input type="text" id="sum1" disabled="disabled"  value='0'> ￥</td>
+        </tr>
+        <tr>
+            <td>利息和</td>
+            <td><input type="text" id="sum2"  disabled="disabled" value='0'> ￥</td>
+        </tr>
+        <tr>
+            <td>本息和</td>
+            <td><input type="text" id="sum3"  disabled="disabled" value='0'> ￥</td>
+        </tr>
+    </table>
+
+</body>
+</html>

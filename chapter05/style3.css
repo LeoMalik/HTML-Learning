@@ -1,0 +1,42 @@
+div{
+    width: 300px;
+}
+p a:hover{
+    text-decoration: underline;
+    color: chocolate;
+}
+p a{
+
+    line-height: 26px;
+    text-decoration: none;
+    color: gray;
+}
+h1{
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+    line-height: 35px;
+    text-indent:1em;
+    background: -webkit-linear-gradient(bottom,blue,deepskyblue);
+}
+.second {
+    font-weight: bold;
+    backgroundcolor: #1f87cc;
+    font-size: 14px;
+    line-height: 30px;
+    text-decoration: none;
+    text-indent:2em;
+    background: linear-gradient(to bottom,#e4f1fa,#bddff7,#e4f1fa);
+}
+
+.second a{
+    color: #0565c6;
+    text-decoration:none;
+}
+.second a:hover{
+    text-decoration: underline;
+}
+li{
+    list-style: none;
+}
+

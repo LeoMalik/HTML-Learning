@@ -1,0 +1,40 @@
+#product{
+    background: #fff ;
+    width: 230px;
+}
+h1, dl, dt, dd {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1{
+    text-indent: 1em;
+    color: white;
+    font-size: 20px;
+    background: black;
+    line-height: 35px;
+}
+#product dt{
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 35px;
+    height: 35px;
+    padding-left: 27px;
+}
+#product dt:nth-of-type(1){
+    background: url("icon_01.gif") 0px 0px no-repeat;
+}
+#product dt:nth-of-type(2){
+    background: url("icon_02.gif") no-repeat;
+}
+#product dt:nth-of-type(3){
+    background: url("icon_03.gif") no-repeat;
+}
+
+#product dd{
+    font-size: 12px;
+    line-height: 20px;
+    color: #666666;
+    border-bottom: dashed 1px #666666;
+    padding-left: 27px;
+}

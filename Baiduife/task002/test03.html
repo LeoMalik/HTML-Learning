@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .title,.choices{
+            margin: 0;
+            padding: 0;
+        }
+
+        .title{
+            margin: 0 auto;
+            text-align: center;
+            width: 800px;
+            height:70px;
+            font-size: 24px;
+            font-weight: bold;
+            font-family: "微软雅黑",serif;
+            color: orangered;
+        }
+
+        .choices{
+            width: 190px;
+            height: 30px;
+            margin: 0 auto;
+        }
+        .choices span{
+            display: block;
+            float: left;
+            text-align: center;
+            width: 80px;
+            line-height: 25px;
+            height: 25px;
+            background: #1f87cc;
+            color: #eeeeee;
+            margin-right: 10px;
+            border: 1px #eeeeee solid;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        var $ = document.querySelector.bind(document);
+        var datas=["iphone5","ipad","mac","谢谢参与","xiaomi","kindle","50元充值卡"],
+            //奖品数组
+            timer=null,
+            flag=true;
+            //回车是否被按下
+
+        //计时器
+        window.onload=function () {
+            var title=$(".title"),
+                play=$(".play"),
+                stop=$(".stop");
+            // console.log(play)
+
+            //开始抽奖
+            play.onclick=playFun;
+            //键盘事件
+            document.onkeyup=function (ev) {
+                if (ev.keyCode===13){
+                    if (flag===0){
+                        playFun();
+                        flag=1;
+                    }
+                    else {
+                        endFun();
+                        flag=0;
+                    }
+                }
+            };
+
+            function playFun() {
+                clearInterval(timer);
+                timer=setInterval(function () {
+                    var random=Math.floor(Math.random()*datas.length);
+                    title.innerHTML=datas[random];
+                },50);
+                play.style.background="#666666";
+            }
+
+            //结束抽奖
+            stop.onclick=endFun;
+            function endFun() {
+                clearInterval(timer);
+                play.style.background="#1f87cc";
+            }
+        };
+
+
+    </script>
+</head>
+<body>
+    <div class="title">
+        标题
+    </div>
+    <div class="choices">
+        <span class="play">开始</span>
+        <span class="stop">结束</span>
+    </div>
+</body>
+</html>

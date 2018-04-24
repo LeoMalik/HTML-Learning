@@ -1,0 +1,61 @@
+.cal input{
+	width: 160px;
+	display: inline-block;
+}
+li{
+    list-style: none;
+}
+.cal{
+	margin: 20px;
+}
+.content{
+	margin-top: 20px;
+}
+.row{
+	margin-top: 10px;
+}
+#dropDownMenu span{
+    text-align: center;
+
+}
+#dropDownMenu {
+    position: relative;
+    padding: 10px;
+}
+#dropDownMenu span{
+    padding: 10px;
+    color: blue;
+}
+#dropDownMenu .menu{
+    display: none;
+}
+#dropDownMenu .menu1{
+	width: 60px;
+	border: 1px solid;
+	padding: 5px;
+	position: absolute;
+    top: 35px;
+    left: 10px;
+}
+#dropDownMenu .menu2{
+    width: 60px;
+    border: 1px solid;
+    padding: 5px;
+    position: absolute;
+    top: 35px;
+    left: 80px;
+}
+#dropDownMenu .menu3{
+    width: 60px;
+    border: 1px solid;
+    padding: 5px;
+    position: absolute;
+    top: 35px;
+    left: 150px;
+}
+
+#dropDownMenu ul li{
+	list-style: none;
+	font-size: 10px;
+	padding: 10px;
+}

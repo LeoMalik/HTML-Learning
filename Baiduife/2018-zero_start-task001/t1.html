@@ -3,51 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        div{
-            box-sizing: border-box;
-        }
-
-        /*头部*/
-        .header{
-            width: 1000px;
-            height: 250px;
-            margin: 0 auto;
-            background: #CCCCCC;
-            position: relative;
-        }
-        .user{
-            width: 180px;
-            height: 200px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            background: #FFFFFF;
-        }
-        .user .img{
-            width: 100%;
-            border: 1px #FFFFFF solid;
-            border-radius: 50%;
-        }
-        .user img{
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="header">
-        <div class="wrap">
+    <div class="wrap">
+        <div class="header">
             <div class="user">
                 <div class="img">
-                    <a href="#"><img src="test.jpg" alt=""></a>
+                    <a href="#"><img src="image/test.jpg" alt=""></a>
+                </div>
+                <h1>姓名:夹子</h1>
+                <h3>求职方向:前端工程师</h3>
+            </div>
+        </div>
+        <div class="info">
+            <ul>
+                <li><img src="image/call.png" alt="#"><span>123-2345-6789</span></li>
+                <li><img src="image/email.png" alt=""><span>xingming@email.com</span></li>
+                <li><img src="image/web3.png" alt="#"><a href="https://github.com/LeoMalik"><span>zuopinlianjie.com</span></a></li>
+            </ul>
+        </div>
+        <div class="left">
+            <div class="contact">
+                <ul>
+                    <li class="on"><img src="image/email.png" alt=""><span>联系方式</span></li>
+                    <li><img src="image/call.png" alt=""><span>123-456-789</span></li>
+                    <li><img src="image/info.png" alt=""><span>username@email.com</span></li>
+                </ul>
+            </div>
+            <div class="baseInfo">
+                <ul>
+                    <li class="on"><img src="image/info.png" alt="#"><span>基本信息</span></li>
+                    <li><img src="image/info.png" alt="#"><span>年龄: 20</span></li>
+                    <li><img src="image/info.png" alt="#"><span>学历: 本科</span></li>
+                    <li><img src="image/info.png" alt="#"><span>地址: 江西</span></li>
+                </ul>
+            </div>
+            <div class="reward">
+                <ul>
+                    <li class="on">
+                        <img src="image/reward.png" alt="">
+                        <span>荣誉证书</span>
+                    </li>
+                    <li><img src="image/info.png" alt="">
+                        <span>通用技能证书</span>
+                        <p>英语四级证书英语四级证书英语四级证书英语四级证书</p>
+                    </li>
+                    <li><img src="image/info.png" alt="">
+                        <span>通用技能证书</span>
+                        <p>英语四级证书英语四级证书英语四级证书英语四级证书</p>
+                    </li>
+                    <li><img src="image/info.png" alt="">
+                        <span>通用技能证书</span>
+                        <p>英语四级证书英语四级证书英语四级证书英语四级证书</p>
+                    </li>
+                    <li><img src="image/info.png" alt="">
+                        <span>通用技能证书</span>
+                        <p>英语四级证书英语四级证书英语四级证书英语四级证书</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right">
+            <div class="edu">
+                <div class="title">
+                    <img src="image/ic_education.png" alt="">
+                    <span>教育经历</span>
+                </div>
+                <div class="edu_content">
+                    <span>2017-2018</span>
+                    <div class="text_content">
+                        <h1>XX大学</h1>
+                        <h2>软件工程</h2>
+                        <h3>专业:3.67/4.00</h3>
+                        <p>软件工程软件工程软件工程软件工程软件工程软件工程软件工程软件工程软件工程软件工程</p>
+                    </div>
+                </div>
+                <div class="edu_content">
+                    <span>2017-2018</span>
+                    <div class="text_content">
+                        <h1>XX大学</h1>
+                        <h2>软件工程</h2>
+                        <h3>专业:3.67/4.00</h3>
+                        <p>软件工程软件工程软件工程软件工程软件工程软件工程软件工程软件工程软件工程软件工程</p>
+                    </div>
+                </div>
+                <div class="edu_content">
+                    <span>2017-2018</span>
+                    <div class="text_content">
+                        <h1>XX大学</h1>
+                        <h2>软件工程</h2>
+                        <h3>专业:3.67/4.00</h3>
+                        <p>软件工程软件工程软件工程软件工程软件工程软件工程软件工程软件工程软件工程软件工程</p>
+                    </div>
                 </div>
             </div>
-            <div class="info"></div>
+            <div class="project">
+                <div class="title">
+                    <img src="image/project.png" alt="">
+                    <span>参与项目</span>
+                </div>
+                <div class="edu_content">
+                    <span>2017-2018</span>
+                    <div class="text_content">
+                        <h1>互联网项目</h1>
+                        <h2>项目组长</h2>
+                        <h3>2017.8-至今</h3>
+                        <p>知识面相当广泛知识面相当广泛知识面相当广泛知识面相当广泛知识面相当广泛</p>
+                    </div>
+                </div>
+                <div class="edu_content">
+                    <span>2017-2018</span>
+                    <div class="text_content">
+                        <h1>互联网项目</h1>
+                        <h2>项目组长</h2>
+                        <h3>2017.8-至今</h3>
+                        <p>知识面相当广泛知识面相当广泛知识面相当广泛知识面相当广泛知识面相当广泛</p>
+                    </div>
+                </div>
+                <div class="edu_content">
+                    <span>2015-2018</span>
+                    <div class="text_content">
+                        <h1>互联网项目</h1>
+                        <h2>项目组长</h2>
+                        <h3>2017.8-至今</h3>
+                        <p>知识面相当广泛知识面相当广泛知识面相当广泛知识面相当广泛知识面相当广泛</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

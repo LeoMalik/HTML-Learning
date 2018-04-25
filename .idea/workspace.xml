@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="61dd2dea-3442-4ba1-8144-6555b32c0fc9" name="Default" comment="null">
-      <change afterPath="$PROJECT_DIR$/Baiduife/2018-zero_start-task001/test.jpg" afterDir="false" />
+    <list default="true" id="61dd2dea-3442-4ba1-8144-6555b32c0fc9" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Baiduife/2018-zero_start-task001/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Baiduife/2018-zero_start-task001/image/call.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Baiduife/2018-zero_start-task001/image/education.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Baiduife/2018-zero_start-task001/image/email.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Baiduife/2018-zero_start-task001/image/ic_education.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Baiduife/2018-zero_start-task001/image/info.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Baiduife/2018-zero_start-task001/image/project.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Baiduife/2018-zero_start-task001/image/reward.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Baiduife/2018-zero_start-task001/image/web3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Baiduife/2018-zero_start-task001/t1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Baiduife/2018-zero_start-task001/t1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web开发项目教程/work2/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web开发项目教程/work2/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baiduife/2018-zero_start-task001/test.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Baiduife/2018-zero_start-task001/image/test.jpg" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,8 +30,27 @@
       <file leaf-file-name="t1.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Baiduife/2018-zero_start-task001/t1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+            <state relative-caret-position="87">
+              <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Baiduife/2018-zero_start-task001/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -31,17 +58,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web开发项目教程/work2/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2900">
-              <caret line="100" column="18" lean-forward="true" selection-start-line="100" selection-start-column="18" selection-end-line="100" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web开发项目教程/work2/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
+            <state relative-caret-position="1160">
+              <caret line="61" column="33" lean-forward="true" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -52,8 +70,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -86,6 +104,9 @@
       <find>Nav</find>
       <find>overflow: hidden;</find>
       <find>.gamel</find>
+      <find>ad</find>
+      <find>h1</find>
+      <find>.png</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -94,7 +115,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Baiduife/task002/test5.css.html" />
         <option value="$PROJECT_DIR$/Baiduife/task002/test5.css" />
         <option value="$PROJECT_DIR$/Baiduife/task002/test05.html" />
         <option value="$PROJECT_DIR$/Baiduife/task002/test05.css" />
@@ -143,8 +163,9 @@
         <option value="$PROJECT_DIR$/web开发项目教程/charpter05/t4.html" />
         <option value="$PROJECT_DIR$/web开发项目教程/charpter05/t5.html" />
         <option value="$PROJECT_DIR$/web开发项目教程/charpter05/t6.html" />
-        <option value="$PROJECT_DIR$/Baiduife/2018-zero_start-task001/t1.html" />
         <option value="$PROJECT_DIR$/web开发项目教程/work2/css/style.css" />
+        <option value="$PROJECT_DIR$/Baiduife/2018-zero_start-task001/t1.html" />
+        <option value="$PROJECT_DIR$/Baiduife/2018-zero_start-task001/css/style.css" />
       </list>
     </option>
   </component>
@@ -158,10 +179,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="859" />
-    <option name="y" value="69" />
+    <option name="x" value="812" />
+    <option name="y" value="145" />
     <option name="width" value="1106" />
-    <option name="height" value="1041" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -185,7 +206,9 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -215,26 +238,6 @@
               <item name="HTML learning" type="462c0819:PsiDirectoryNode" />
               <item name="web开发项目教程" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="HTML learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HTML learning" type="462c0819:PsiDirectoryNode" />
-              <item name="web开发项目教程" type="462c0819:PsiDirectoryNode" />
-              <item name="work2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HTML learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HTML learning" type="462c0819:PsiDirectoryNode" />
-              <item name="web开发项目教程" type="462c0819:PsiDirectoryNode" />
-              <item name="work2" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HTML learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HTML learning" type="462c0819:PsiDirectoryNode" />
-              <item name="web开发项目教程" type="462c0819:PsiDirectoryNode" />
-              <item name="work2" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -256,11 +259,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Leo\WebstormProjects\HTML learning\Baiduife\2018-zero_start-task001\image" />
+      <recent name="C:\Users\Leo\WebstormProjects\HTML learning\Baiduife\2018-zero_start-task001" />
       <recent name="C:\Users\Leo\WebstormProjects\HTML learning\web开发项目教程\charpter04" />
       <recent name="C:\Users\Leo\WebstormProjects\HTML learning\web开发项目教程\charpter03" />
       <recent name="C:\Users\Leo\WebstormProjects\HTML learning\web开发项目教程\work2\images" />
-      <recent name="C:\Users\Leo\WebstormProjects\HTML learning\Maizi" />
-      <recent name="C:\Users\Leo\WebstormProjects\HTML learning\Maizi\images" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Leo\WebstormProjects\HTML learning\Baiduife\2018-zero_start-task001" />
@@ -282,27 +285,27 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.t1.html">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration name="index.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML learning/Maizi/index.html" />
+    <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML learning/web开发项目教程/work2/index.html" />
     <configuration name="t1.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML learning/Baiduife/2018-zero_start-task001/t1.html" />
-    <configuration name="t3.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML learning/web开发项目教程/charpter05/t3.html" />
-    <configuration name="t4.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML learning/web开发项目教程/charpter05/t4.html" />
     <configuration name="t5.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML learning/web开发项目教程/charpter04/t5.html" />
     <configuration name="t5.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML learning/web开发项目教程/charpter05/t5.html" />
     <configuration name="t6.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML learning/web开发项目教程/charpter05/t6.html" />
     <list>
-      <item itemvalue="JavaScript Debug.t3.html" />
-      <item itemvalue="JavaScript Debug.t4.html" />
       <item itemvalue="JavaScript Debug.t5.html" />
       <item itemvalue="JavaScript Debug.t6.html" />
       <item itemvalue="JavaScript Debug.t1.html" />
+      <item itemvalue="JavaScript Debug.index.html" />
+      <item itemvalue="JavaScript Debug.index.html (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.index.html (1)" />
         <item itemvalue="JavaScript Debug.t1.html" />
         <item itemvalue="JavaScript Debug.t6.html" />
         <item itemvalue="JavaScript Debug.t5.html" />
-        <item itemvalue="JavaScript Debug.t4.html" />
-        <item itemvalue="JavaScript Debug.t3.html" />
       </list>
     </recent_temporary>
   </component>
@@ -405,7 +408,7 @@
       <workItem from="1524483953431" duration="544000" />
       <workItem from="1524484662434" duration="3384000" />
       <workItem from="1524554970311" duration="4077000" />
-      <workItem from="1524624578745" duration="1690000" />
+      <workItem from="1524624578745" duration="20969000" />
     </task>
     <task id="LOCAL-00001" summary="null">
       <created>1524586330781</created>
@@ -421,17 +424,31 @@
       <option name="project" value="LOCAL" />
       <updated>1524586441609</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="null">
+      <created>1524626335985</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1524626335985</updated>
+    </task>
+    <task id="LOCAL-00004" summary="null">
+      <created>1524626457778</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1524626457779</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="416222000" />
+    <option name="totallyTimeSpent" value="435501000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="859" y="69" width="1106" height="1041" extended-state="0" />
+    <frame x="812" y="145" width="1106" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24157304" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27059925" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.3297619" />
@@ -440,7 +457,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.27272728" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3721634" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -493,6 +510,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
           <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -726,27 +753,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Baiduife/2018-zero_start-task001/t1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web开发项目教程/work2/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2900">
-          <caret line="100" column="18" lean-forward="true" selection-start-line="100" selection-start-column="18" selection-end-line="100" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web开发项目教程/work2/images/gameLogo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Baiduife/2018-zero_start-task001/image/call.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Baiduife/2018-zero_start-task001/image/test.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/web开发项目教程/work2/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
+        <state relative-caret-position="308">
+          <caret line="100" column="26" lean-forward="true" selection-start-line="100" selection-start-column="26" selection-end-line="100" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Baiduife/2018-zero_start-task001/image/info.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web开发项目教程/work2/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1160">
+          <caret line="61" column="33" lean-forward="true" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Baiduife/2018-zero_start-task001/t1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Baiduife/2018-zero_start-task001/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
         </state>
       </provider>
     </entry>

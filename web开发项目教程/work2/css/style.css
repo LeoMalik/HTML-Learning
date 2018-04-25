@@ -99,7 +99,7 @@ a{
     font-size: 12px;
     color: #000000;
     text-decoration: none;
-    background: url("images/rightA.png") 170px no-repeat;
+    background: url("../images/rightA.png") 170px no-repeat;
 }
 .gameList li:hover{
     background: #D86034;
@@ -307,7 +307,7 @@ a{
     padding-left: 45px;
     font-size: 12px;
     transition: all 0.3s;
-    background: url("images/rightTwo.png") 10px no-repeat;
+    background: url("../images/rightTwo.png") 10px no-repeat;
 }
 .newsList li:hover{
     transform: translate(0, 4px) scale(1.1);

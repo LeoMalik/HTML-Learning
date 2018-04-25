@@ -45,7 +45,7 @@ a{
 }
 .nav_content{
     height: 50px;
-    background: url("images/gameLogo.png") no-repeat;
+    background: url("../images/gameLogo.png") no-repeat;
 }
 .nav .l span{
     font-weight: bold;

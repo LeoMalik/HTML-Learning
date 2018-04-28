@@ -46,6 +46,10 @@
             line-height: 60px;
             border-right: 1px solid #318DCB;
             padding: 0 10px;
+            -webkit-transition: background 0.3s linear;
+        }
+        nav li:hover{
+            background: #2F89C5;
         }
         nav li a{
             text-align: center;
@@ -62,12 +66,13 @@
         }
         .body_left{
             width: 630px;
+            display: inline-block;
+            vertical-align: top;
         }
 
         /*标题栏*/
         .title{
             border-top: 1px solid #3598DC;
-            margin-top: 20px;
             height: 45px;
             background: linear-gradient(to bottom,#E4E2E3,#E3E1E2);
         }
@@ -91,12 +96,16 @@
             width: 315px;
             height: 165px;
         }
+
+        /*.newsBox li a.content{*/
+            /*padding: 15px 20px;*/
+        /*}*/
         .newsBox li a{
             display: inline-block;
             width: 315px;
             height: 165px;
             vertical-align: top;
-            background: #318DCB;
+            background: #3598DC;
             text-decoration: none;
             color: #FFFFFF;
         }
@@ -106,8 +115,12 @@
             border-bottom: 1px solid #C7C3C4;
         }
         .newsBox li p{
-            padding: 20px 15px;
+            margin: 20px 15px;
             color:#DBDDDC;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
         }
 
         /*活动部分*/
@@ -130,24 +143,35 @@
         .imgList a:last-child{
             margin-right: 0;
         }
+        .activityList{
+            display: inline-block;
+            vertical-align: top;
+            width: 435px;
+        }
+
         .activityList li{
             list-style: none;
             display: block;
             height: 30px;
             margin-top: 10px;
             counter-increment: name;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transition: all 0.2s linear;
+       }
+        .activity li:hover{
+            transform: translate(0, 4px) scale(1.05);
         }
         .activityList li a {
             display: inline-block;
             vertical-align: middle;
-            width: 435px;
             line-height: 30px;
             text-decoration: none;
             font-size: 16px;
             color: #454545;
-            white-space: nowrap;
-            text-overflow: ellipsis;
         }
+
         .activityList li:before{
             content: counter(name);
             text-align: center;
@@ -159,6 +183,23 @@
             width: 30px;
             height: 30px;
             background: #318DCB;
+        }
+        .activity .img_right{
+            display: inline-block;
+            width: 150px;
+            margin-left: 40px;
+        }
+        .img_right li{
+            margin-top: 15px;
+        }
+
+        /*右半部分*/
+        .body_right{
+            margin-left: 10px;
+            width: 355px;
+            height: 1000px;
+            display: inline-block;
+            background: #CCCCCC;
         }
     </style>
     <script src="js/scripts.js"></script>
@@ -231,9 +272,9 @@
                         <div class="newsBox">
                             <ul>
                                 <li>
-                                    <a href=""><img src="images/news_10.jpg" alt=""></a><a href="">
+                                    <a href=""><img src="images/news_10.jpg" alt=""></a><a href="" class="content">
                                         <h2>新闻标题会很长很长很长很长很长很长</h2>
-                                        <p>新闻内容会很很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长</p>
+                                        <p>新闻内容会很很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很很长很长很长</p>
                                     </a>
                                 </li>
                                 <li>
@@ -287,12 +328,22 @@
                                 <li><a href="">活动标题很长很长</a></li>
                             </ul>
                         </div>
+                        <div class="img_right">
+                            <ul>
+                                <li><a href=""><img src="images/hd_17.jpg" alt=""></a></li>
+                                <li><a href=""><img src="images/hdd_20.jpg" alt=""></a></li>
+                            </ul>
+                        </div>
                     </section>
                 </article>
             </div>
             <div class="body_right">
                 <aside>
-                    <section class="bowen"></section>
+                    <section class="bowen">
+                        <div class="title">
+                            <a href="">联盟会员新闻</a>
+                        </div>
+                    </section>
                     <section class="wanted"></section>
                     <section class="callMe"></section>
                     <section class="vips"></section>

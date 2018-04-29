@@ -15,11 +15,11 @@ body{
     width: 1000px;
     margin: 0 auto;
 }
-.center_wrap li{
+.activity,.body_right li{
     transition: all 0.2s linear;
     list-style: none;
 }
-.center_wrap li:hover{
+.activity,.body_right li:hover{
     transform: translate(0, 2%) scale(1.01);
 }
 a{
@@ -179,10 +179,16 @@ p#slide-nav a {
 .newsBox li{
     list-style: none;
     margin-top: 10px;
+    transition: all 0.2s linear;
+    
 }
 .newsBox li img{
     width: 315px;
     height: 165px;
+
+}
+.newsBox li:hover{
+    box-shadow: 1px 4px 25px #a39f9f;
 }
 
 /*.newsBox li a.content{*/

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrap{
+            width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .box{
+            margin:100px auto 20px;
+
+            position: relative;
+        }
+        p{
+            margin: 0 auto 15px auto;
+            width: 100px;
+        }
+        #showlineleft{
+            width: 0;
+            height: 2px;
+            background: blue;
+            position: absolute;
+            right: 50%;
+        }
+        #showlineRight{
+            width: 0;
+            height: 2px;
+            background-color: blue;
+            position: absolute;
+            left: 50%;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="wrap">
+        <div class="box">
+            <p>前端学院</p>
+            <div id="showlineleft"></div>
+            <div id="showlineRight"></div>
+        </div>
+        <button class="button" type="button" name="button" onclick="show()">改变样式</button>
+    </div>
+    <script>
+        function show() {
+            var text=document.querySelector("p");
+            var boxLeft=document.querySelector("#showlineleft");
+            var boxRight=document.querySelector("#showlineRight");
+            if(text.style.color !=="blue"){
+                text.style.transition="color 1s";
+                text.style.color="blue";
+                boxLeft.style.transition="width 1s";
+                boxLeft.style.width="50px";
+                boxRight.style.transition="width 1s";
+                boxRight.style.width="50px";
+            }else {
+                text.style.transition="color 1s";
+                text.style.color="black";
+                boxLeft.style.transition="width 1s";
+                boxLeft.style.width="0px";
+                boxRight.style.transition="width 1s";
+                boxRight.style.width="0px";
+            }
+        }
+    </script>
+</body>
+</html>

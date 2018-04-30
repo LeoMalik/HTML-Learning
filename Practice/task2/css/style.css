@@ -15,7 +15,7 @@ body{
     width: 1000px;
     margin: 0 auto;
 }
-.activity,.body_right li{
+.activity,.body_right,.img_right li{
     transition: all 0.2s linear;
     list-style: none;
 }

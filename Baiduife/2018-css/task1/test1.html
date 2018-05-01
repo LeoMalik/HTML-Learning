@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <style>
+        .container{
+            margin: 0 auto;
+            display: flex;
+            width: 600px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h2{
+            position: relative;
+            text-align: center;
+            padding: 15px;
+            color: #000000;
+            transition: all 2s ease-in-out;
+        }
+        .line{
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background: blue;
+            left: 0;
+            bottom: 0;
+            transition: transform 2s ease-in-out;
+            transform: scaleX(0);
+        }
+        button{
+            width: 100px;
+            height: 30px;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+	<div class="container">
+		<h2 class="title">
+            百度前端学院
+            <i class="line"></i>
+        </h2>
+        <button class="change">change</button>
+	</div>
+    <script>
+        var title=document.querySelector("h2");
+        var line=document.querySelector("i");
+        var button=document.querySelector("button");
+        var count=true;
+        button.onclick=function (ev) {
+            if (count===true) {
+                line.style.transform="scaleX(1)";
+                title.style.animation="changeColor1";
+                title.style.color="blue";
+                count=false;
+            }
+            else {
+                line.style.transform="scaleX(0)";
+                title.style.animation="changeColor2";
+                title.style.color="#000";
+                count=true;
+            }
+        }
+    </script>
+</body>
+</html>

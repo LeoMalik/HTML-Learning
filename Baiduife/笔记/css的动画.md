@@ -43,7 +43,7 @@ transform-function list:
 `animation：<single-animation>[,<single-animation>]*`
 
 ```
-<single-animation> = <single-animation-name> || <time> || <single-animation-timing-function>
+    <single-animation> = <single-animation-name> || <time> || <single-animation-timing-function>
  || <time> || <single-animation-iteration-count> || <single-animation-direction> ||
   <single-animation-fill-mode> || <single-animation-play-state>
 ```
@@ -74,3 +74,37 @@ transform-function list:
     100%    {transform: rotate(-360deg);left:0px;}
 }
 ```
+
+## css的3D效果
+
+### 1.旋转:
+
+`rorateX,rorateY,rorate`
+
+### 2.perspective:
+
+视点距屏幕的距离,相当于你在这个距离看图片中的物体,如图1
+
+![6](http://files.jb51.net/file_images/article/201605/2016523113153130.jpg?201642311323)
+
+### 3.translateZ:
+
+3D物体距离原点的距离,如上图图2
+
+### 4.prespective-origin:
+
+舞台或者元素的中心
+
+perspective-origin: 25% 75%;
+
+![立方体不同透视角度的效果 张鑫旭-鑫空间-鑫生活](http://image.zhangxinxu.com/image/blog/201209/perspective02.png)
+
+### 5.transform-style:
+
+如果对一个元素设置了`transform-style`的值为`flat`，则该元素的所有子元素都将被平展到该元素的2D平面中进行呈现
+
+`transform-style`属性需要设置在父元素中，并且高于任何嵌套的变形元素。最后，我们运用一个翻转的例子，来加深一下对`transform-style`属性的印象：
+
+### 6.backface-visibility:
+
+设置透视效果,即能否透过前面的元素看到后面的元素

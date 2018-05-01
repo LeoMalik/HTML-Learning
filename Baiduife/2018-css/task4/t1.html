@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .wrap{
+            width:250px;
+            height: 350px;
+            margin: 1.5em auto;
+        }
+        .container{
+            width:250px;
+            margin: 0 auto;
+            transform-style: preserve-3d;
+        }
+
+        .wrap:hover .container{
+            transform: rotateY(-180deg)
+        }
+        #right{
+            transform: translateZ(10px);
+        }
+        #left,#right{
+            transition: all 0.5s ease-out;
+            position: absolute;
+        }
+        .container{
+            transition: all 0.5s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="container">
+            <img src="正面.jpg" alt="" id="left">
+            <img src="反面.jpg" alt="" id="right">
+        </div>
+    </div>
+</body>
+</html>

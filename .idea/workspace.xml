@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="61dd2dea-3442-4ba1-8144-6555b32c0fc9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Baiduife/3D轮播图.html" afterDir="false" />
+    <list default="true" id="61dd2dea-3442-4ba1-8144-6555b32c0fc9" name="Default" comment="null">
+      <change afterPath="$PROJECT_DIR$/Baiduife/2018-css/task6/001.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Baiduife/2018-css/task6/timg (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Baiduife/2018-css/task6/timg (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Baiduife/2018-css/task6/timg (3).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Baiduife/2018-css/task6/timg(4).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Baiduife/2018-css/task6/timg.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baiduife/2018-css/task6/hd_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baiduife/2018-css/task6/t1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Baiduife/2018-css/task6/t1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baiduife/3D轮播图.html" beforeDir="false" afterPath="$PROJECT_DIR$/Baiduife/3D轮播图.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baiduife/笔记/css的动画.md" beforeDir="false" afterPath="$PROJECT_DIR$/Baiduife/笔记/css的动画.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,17 +29,35 @@
       <file leaf-file-name="t1.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Baiduife/2018-css/task2/t1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+            <state relative-caret-position="-8">
+              <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="3D轮播图.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="3D轮播图.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Baiduife/3D轮播图.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+            <state>
+              <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="t1.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Baiduife/2018-css/task6/t1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="70" column="41" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web开发项目教程/work2/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3037">
+              <caret line="437" selection-start-line="437" selection-end-line="437" />
             </state>
           </provider>
         </entry>
@@ -135,8 +162,8 @@
         <option value="$PROJECT_DIR$/Baiduife/2018-css/task4/t1.html" />
         <option value="$PROJECT_DIR$/Baiduife/色子.html" />
         <option value="$PROJECT_DIR$/Baiduife/2018-css/task5/t1.html" />
-        <option value="$PROJECT_DIR$/Baiduife/2018-css/task6/t1.html" />
         <option value="$PROJECT_DIR$/Baiduife/3D轮播图.html" />
+        <option value="$PROJECT_DIR$/Baiduife/2018-css/task6/t1.html" />
       </list>
     </option>
   </component>
@@ -150,8 +177,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="359" />
-    <option name="y" value="134" />
+    <option name="x" value="625" />
+    <option name="y" value="93" />
     <option name="width" value="1398" />
     <option name="height" value="944" />
   </component>
@@ -185,7 +212,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -211,10 +237,29 @@
               <item name="2018-css" type="462c0819:PsiDirectoryNode" />
               <item name="task6" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="HTML learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HTML learning" type="462c0819:PsiDirectoryNode" />
+              <item name="web开发项目教程" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HTML learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HTML learning" type="462c0819:PsiDirectoryNode" />
+              <item name="web开发项目教程" type="462c0819:PsiDirectoryNode" />
+              <item name="work2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HTML learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HTML learning" type="462c0819:PsiDirectoryNode" />
+              <item name="web开发项目教程" type="462c0819:PsiDirectoryNode" />
+              <item name="work2" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -229,22 +274,22 @@
     <property name="node.js.path.for.package.prettier" value="project" />
     <property name="node.js.selected.package.prettier" value="" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Leo\WebstormProjects\HTML learning\Baiduife" />
-      <recent name="C:\Users\Leo\WebstormProjects\HTML learning\Baiduife\2018-css" />
-      <recent name="C:\Users\Leo\WebstormProjects\HTML learning\Baiduife\2018-zero_start\task1" />
-      <recent name="C:\Users\Leo\WebstormProjects\HTML learning\Baiduife\before" />
-      <recent name="C:\Users\Leo\WebstormProjects\HTML learning\Maizi\task2\images" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Leo\WebstormProjects\HTML learning\Baiduife\2018-css\task6" />
       <recent name="C:\Users\Leo\WebstormProjects\HTML learning\Baiduife\2018-css\task4" />
       <recent name="C:\Users\Leo\WebstormProjects\HTML learning\Maizi\task2" />
       <recent name="C:\Users\Leo\WebstormProjects\HTML learning\Maizi\task2\imgs" />
       <recent name="C:\Users\Leo\WebstormProjects\HTML learning\Baiduife\2018-zero_start-task001" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Leo\WebstormProjects\HTML learning\Baiduife\2018-css\task6" />
+      <recent name="C:\Users\Leo\WebstormProjects\HTML learning\Baiduife" />
+      <recent name="C:\Users\Leo\WebstormProjects\HTML learning\Baiduife\2018-css" />
+      <recent name="C:\Users\Leo\WebstormProjects\HTML learning\Baiduife\2018-zero_start\task1" />
+      <recent name="C:\Users\Leo\WebstormProjects\HTML learning\Baiduife\before" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -259,7 +304,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.3D轮播图.html">
+  <component name="RunManager" selected="JavaScript Debug.t1.html (1)">
     <configuration name="3D轮播图.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML learning/Baiduife/3D轮播图.html" />
     <configuration name="色子.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML learning/Baiduife/色子.html" />
     <configuration name="t1.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HTML learning/Baiduife/2018-css/task6/t1.html" />
@@ -274,8 +319,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.3D轮播图.html" />
         <item itemvalue="JavaScript Debug.t1.html (1)" />
+        <item itemvalue="JavaScript Debug.3D轮播图.html" />
         <item itemvalue="JavaScript Debug.色子.html" />
         <item itemvalue="JavaScript Debug.t1.html" />
         <item itemvalue="JavaScript Debug.test2.html" />
@@ -398,7 +443,10 @@
       <workItem from="1525165492084" duration="3699000" />
       <workItem from="1525191747993" duration="4825000" />
       <workItem from="1525240156705" duration="3416000" />
-      <workItem from="1525249413824" duration="2438000" />
+      <workItem from="1525249413824" duration="3552000" />
+      <workItem from="1525269636422" duration="1598000" />
+      <workItem from="1525271254640" duration="579000" />
+      <workItem from="1525271848024" duration="2625000" />
     </task>
     <task id="LOCAL-00001" summary="null">
       <created>1524586330781</created>
@@ -554,23 +602,30 @@
       <option name="project" value="LOCAL" />
       <updated>1525243538103</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="null">
+      <created>1525253288627</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1525253288627</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="504047000" />
+    <option name="totallyTimeSpent" value="509963000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="359" y="134" width="1398" height="944" extended-state="0" />
+    <frame x="1003" y="107" width="1398" height="944" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2125" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4993789" visible="true" weight="0.14411765" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.3297619" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3292683" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.30449438" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Structure" order="1" sideWeight="0.50062114" side_tool="true" weight="0.14558823" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.12919255" />
@@ -589,21 +644,21 @@
       <window_info anchor="bottom" id="运行" order="11" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27564102" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.30449438" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.2769784" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.3297619" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="调试" order="7" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
@@ -623,13 +678,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Baiduife/2018-css/task2/t1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Baiduife/2018-css/task4/t1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
@@ -833,13 +881,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web开发项目教程/work2/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-754">
-          <caret line="346" column="25" selection-start-line="346" selection-start-column="25" selection-end-line="346" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web开发项目教程/work2/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="29">
@@ -858,13 +899,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="31" column="5923" lean-forward="true" selection-start-line="31" selection-start-column="5923" selection-end-line="31" selection-end-column="5923" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Practice/task2/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -910,13 +944,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Baiduife/2018-css/task6/t1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Baiduife/2018-css/task1/test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1740">
@@ -945,19 +972,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Baiduife/2018-css/task2/t1.html">
+    <entry file="file://$PROJECT_DIR$/Baiduife/slide.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+        <state relative-caret-position="-1044" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Practice/task2/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="39" column="28" lean-forward="true" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Baiduife/3D轮播图.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+        <state>
+          <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Baiduife/2018-css/task2/t1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Baiduife/2018-css/task6/001.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web开发项目教程/work2/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3037">
+          <caret line="437" selection-start-line="437" selection-end-line="437" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Baiduife/2018-css/task6/t1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="70" column="41" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.212" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

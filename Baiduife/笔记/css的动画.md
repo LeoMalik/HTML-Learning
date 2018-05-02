@@ -85,6 +85,8 @@ transform-function list:
 
 视点距屏幕的距离,相当于你在这个距离看图片中的物体,如图1
 
+**一般设置为舞台(wrapper)的属性**
+
 ![6](http://files.jb51.net/file_images/article/201605/2016523113153130.jpg?201642311323)
 
 ### 3.translateZ:
@@ -100,6 +102,8 @@ perspective-origin: 25% 75%;
 ![立方体不同透视角度的效果 张鑫旭-鑫空间-鑫生活](http://image.zhangxinxu.com/image/blog/201209/perspective02.png)
 
 ### 5.transform-style:
+
+**一般设置为容器的属性**
 
 如果对一个元素设置了`transform-style`的值为`flat`，则该元素的所有子元素都将被平展到该元素的2D平面中进行呈现
 

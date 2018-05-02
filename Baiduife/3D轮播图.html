@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .wrapper{
+            margin: 0 auto;
+            width: 1000px;
+            height: 500px;
+            perspective: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width:150px;
+            height: 150px;
+            transition: all 5s linear;
+            transform-style: preserve-3d;
+        }
+        .container:hover{
+            transform: rotateY(360deg);
+        }
+        img{
+            width: 150px;
+            height: 150px;
+            position: absolute;
+
+        }
+        img:nth-child(1){
+            transform: rotateY(0deg) translateZ(140px);
+        }
+        img:nth-child(2){
+            transform: rotateY(60deg) translateZ(140px);
+        }
+        img:nth-child(3){
+            transform: rotateY(120deg) translateZ(140px);
+        }
+        img:nth-child(4){
+            transform: rotateY(180deg) translateZ(140px);
+        }
+        img:nth-child(5){
+            transform: rotateY(240deg) translateZ(140px);
+        }
+        img:nth-child(6){
+            transform: rotateY(300deg) translateZ(140px);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <img src="2018-css/task6/hd_1.jpg" alt="">
+            <img src="2018-css/task6/hd_1.jpg" alt="">
+            <img src="2018-css/task6/hd_1.jpg" alt="">
+            <img src="2018-css/task6/hd_1.jpg" alt="">
+            <img src="2018-css/task6/hd_1.jpg" alt="">
+            <img src="2018-css/task6/hd_1.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>

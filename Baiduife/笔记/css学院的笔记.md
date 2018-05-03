@@ -76,25 +76,25 @@
 嘴巴的微笑使用border-radius改变弧度实现;
 
 ```
-border-radius: 0% 40% 50% 50%;效果合适  
+border-radius: 0% 40% 50% 50%;效果合适
 ```
 
 ![img](https://raw.githubusercontent.com/niuweitao777/2018ife/cfca21d32b2d2af20790d61054f31b24f7b0300c/ife%20CSS/cat%20img/3.png)
 
 注意的是每个元素都要预先设好过渡的属性,而不是hover以后再设置= =:
 
-```` css
+```css
 .ear-wrap .left,.ear-wrap .right,.eye-circle,.eye-core,.eye-bottom,.face-red,.mouth{
             transition: all 1s ease-in-out;
             transform-origin:50% 100%;
         }
-````
+```
 
 ### 3.3D 空间的卡片翻转动效
 
 首先设置两个图片的position为absolute,使其处在同一位置
 
-````css
+```css
 #left,#right{
             transition: all 0.5s ease-out;
             position: absolute;
@@ -102,35 +102,35 @@ border-radius: 0% 40% 50% 50%;效果合适
             top: 0;
             backface-visibility: hidden;
         }
-````
+```
 
 然后设置舞台元素的3D属性,首先是舞台的透视点元素,这里要设的尽量远,使其透视效果变化很小:
 
-````css
+```css
 .wrap{
             width:250px;
             height: 350px;
             margin: 1.5em auto;
             perspective: 1000px;
         }
-````
+```
 
 然后给容器的子元素设置3D属性:
 
-````css 
+```css
 .container{
             width:250px;
             margin: 0 auto;
           }
-````
+```
 
 最后设置旋转效果,这里给舞台设置旋转效果:
 
-````css 
+```css
 .wrap:hover .container{
             transform: rotateY(-180deg);
         }
-````
+```
 
 完成
 
@@ -148,7 +148,7 @@ border-radius: 0% 40% 50% 50%;效果合适
 
 ok,完成
 
-````html
+```html
 <div class="wrap">
     <div class="container">
         <div class="side front">1</div>
@@ -159,9 +159,9 @@ ok,完成
         <div class="side bottom">2</div>
     </div>
 </div>
-````
+```
 
-````css
+```css
 .wrap{
             width: 1000px;
             margin: 0 auto;
@@ -206,7 +206,7 @@ ok,完成
         .bottom{
             transform: rotateX(-90deg) translateZ(1em);
         }
-````
+```
 
 再写一个3d轮播图:
 
@@ -234,7 +234,7 @@ ok,完成
 
 首先html结构如下:
 
-````html
+```html
 </head>
 <body>
     <div class="wrap">
@@ -262,13 +262,11 @@ ok,完成
     </div>
 </body>
 </html>
-````
+```
 
 我们吧每个图片的小框设为input[radio]属性,这是个很聪明的办法,避免了js的操作(**我们同样可以利用js来给这些标签动态添加样式名,dom.classList.add**)
 
 然后是到了imgList的部分了,这里的img图片都设置宽高占满屏幕height: 100%; width: 100%;
-
-
 
 到了最重要的部分了,我们如何实现图片的层级显示呢,这里我们用到的一个属性叫做z-index,
 
@@ -285,20 +283,18 @@ label{z-index:10}
 - 刚切换的图片(也就是切换时的背景图片):3
 - 普通的图片:2
 
-
-
 这里会用到一个新的css选择器`:not`,意思是除此之外的元素,格式如下(**我们同样可以利用js来给这些标签动态添加样式名**):
 
-````css
+```css
 .view:not(:checked)~.imgList img{
             animation: oncheck 1s linear;
         }
-````
+```
 
 当点击菜单时,我们使对应的img的z-index设置为4,切换的背景设置为3,其余的设置为2,这样就完成了我们的设计,代码如下:
 
-````css
- 		/*unchecked的图片的视层*/
+```css
+         /*unchecked的图片的视层*/
         .view:not(:checked)~.imgList img{
             animation: oncheck 1s linear; 
         }
@@ -342,13 +338,9 @@ label{z-index:10}
                 transform: translateX(0);
             }
         }
-````
+```
 
 ok完成
-
-
-
-
 
 ### 总结:
 

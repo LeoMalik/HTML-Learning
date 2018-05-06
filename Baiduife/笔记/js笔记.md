@@ -1,3 +1,5 @@
+# 第一节
+
 ### 第一课 变量:
 
 - **js定义全局变量**:不用var来声明,例y=5;
@@ -111,4 +113,229 @@ var obj2={
 obj2.sayHi();
 ````
 
-访问方法时记得加括号obj2.sayHi **()**;
+访问方法时**记得加括号**obj2.sayHi **()**;
+
+### 第六课:对象的原型链
+
+每个对象都有一个原型链:
+
+![](https://ws1.sinaimg.cn/large/c364e082gy1fqz0667x1yj20bp0i9wgi.jpg)
+
++ 在使用或者查找对象的属性时,首先会在对象本身中查找,然后会 **沿原型链顺序自顶向上查找**
+
++ 对象的不同创建方法对应创建的是原型链的不同位置:
+
+  ![1525423688363](C:\Users\Leo\AppData\Local\Temp\1525423688363.png)
+
+  1. var obj={x:1,y:2} `父级Object.prototype`
+  2. function foo(){},`父级foo.prototype`
+  3. Object.craete({obj)
+
++ 检查对象中是否有某个属性:
+  1. "x" in obj:`原型链上查找`
+  2. obj.hasOwnproprety:`对象本身上查找`
+
+### 第七课 对象属性的特性:
+
+![](https://ws1.sinaimg.cn/large/c364e082gy1fqz5wwl84yj20xu06pagy.jpg)
+
+默认都为true,可以用`defineProperty`来修改特定数据的属性,使其不可修改或者删除等:
+
+语法:
+
+````
+Object.defineProperty(obj,x,{
+	value:1,
+	writable:true
+ })
+
+````
+
+
+
+### 第八课 对象的存储器属性:get set
+
+其实也就是构造函数
+
+````js
+var obj2={
+    username:"king",
+    addr:"北京",
+    get age(){  //注意这里没有冒号
+        return 12;
+    }
+    set age(val){
+        this.age=val;
+    }
+};
+obj2.age=15;
+obj2.age;
+````
+
+### 第九课 对象的特性: 
+
+判断一个类是否是另一个类的父类:`obj.isPrototypeOf(obj1)`
+
+判断对象的类型
+
+### 第十课 数组对象: 
+
+1. arr.join()
+2. arr.shift()
+3. arr.pop()
+4. arr.map()
+5. arr.indexOf()
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 第二节
+
+### 第十一课 函数的预处理与执行:
+
+js的解析和执行过程中分为全局和函数两种类型:
+
+
+
++ **<u>全局类型</u>**:在函数运行之前会创建一个词法环境,**先扫描函数声明和var定义的变量**,并定义为undefined.
+
+**在处理函数声明时有冲突,会覆盖,处理变量有冲突,会忽略(函数是优先级最高的一等公民)**
+
+
+
++ **<u>函数类型</u>**:当函数每运行一次时会产生一次词法环境,其他一样,不过当函数有参数时,会直接讲参数的值传入词法环境中
+
+
+
+### 第十二课 作用域:
+
+![](https://ws1.sinaimg.cn/large/c364e082gy1fr0p05b9u7j20no05vmyj.jpg)
+
+**<u>块作用域</u>**:js是没有块作用域这个概念的,意思是如果在括号内定义一个变量,在括号外仍然可以使用
+
+函数作用域:了解一下就行
+
+**<u>动态作用域</u>**:指运行时才指定值域,js不能跨函数动态使用变量
+
+````js
+function f(){
+    alert(x)
+}
+function f1(){
+    var x=5;
+    f();
+}
+function f2(){
+    var x=1;
+    f1();
+}
+f2();
+````
+
+此时运行f2是得不到想要的结果的
+
+**<u>静态作用域</u>**:每个函数都有其对应的词法作用域,
+
+当函数预处理时,它有自己的词法环境scope,当函数被调用的时候,会产生自己的le,并指向f.scope
+
+子函数同理,查找定义时链式向上查找
+
+![](https://ws1.sinaimg.cn/large/c364e082gy1fr0pgt5ayfj20hh0a3mzz.jpg)
+
+### 第十三课 作用域本质与用途:
+
+在写项目时,为了避免全局变量的大量使用,我们在定义一个函数时,只放出它的接口,这个就是作用域的用途:
+
+记得加window.f=f;
+
+![](https://ws1.sinaimg.cn/large/c364e082gy1fr0u53jbw9j208h06o75h.jpg)
+
+### 第十四课 闭包的含义:
+
+引用自由变量的函数离开了创造它的环境后仍然一同存在.如代码所示
+
+````js
+function f1(){
+    var a=10;
+    var b=20;
+    return function f2(){
+        console.log(a);
+    }
+}
+var result=f1();
+result();
+````
+
+这个时候在全局代码中,即使函数f2脱离了函数f1,但是却任旧可以访问a变量
+
+
+
+### 第十五课 闭包的理解
+
+闭包并不是要return出去才创建,而是在函数预处理的时候就已经形成了关系链.
+
+### 第十六课 闭包的好处
+
+减少全局变量的使用,减少函数参数的个数,例:
+
+````js
+function f1(sum1){
+    var value=0;
+    function f2(max){
+        for(var i=0;i<max;i++){
+            value+=i;
+        }
+    }
+    return value+sum1;
+}
+var result=f1(2);
+console.log(result(3));
+````
+
+这个时候只需要传入一个参数就可以完成函数的调用
+
+### 第十七课 闭包使用的注意点
+
++ 父函数每调用一次,就会产生一次闭包
++ 对捕获的父级词法环境的的变量是引用,而不是复制值
++ 循环中创建的变量是全局变量
+
+### 第十八课 对象的创建和访问
+
+````js
+var p={
+    name:"leo",
+    work:function(){
+        console.log("working....");
+    }
+    _age=18,  //约定以_开头的不能更改
+    get age(){
+    	return this._age;
+	},
+    set age(val){
+        if(val<0||val>150){
+            throw new error("invalid");
+        }
+        else{
+            this._age=val;
+        }
+    }
+    
+}
+
+````
+
+对象的访问:使用obj.age,或者obj["age"]创建
+
+var result=p&&p.address&&p.address.home
+
+### 第十九课:

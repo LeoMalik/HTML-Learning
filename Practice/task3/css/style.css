@@ -1,0 +1,182 @@
+/* 全局 */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 初始height:100% */
+html,body{height:100%}
+div{
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #b7c0cd;
+}
+body{
+    font-family: ProximaNova-Semibold ProximaNova-Regular sans-serif;
+    font-size: 14px;
+}
+.l{
+    float: left;
+}
+.r{
+    float:right;
+}
+/* 左侧工具栏 */
+.toolbar{
+    height: 100%;
+    width: 350px;
+	background-color: #1d2531;
+}
+/* 按钮栏 */
+aside{
+    height: 100%;
+    display: flex;
+}
+.sidebar{
+    padding-top: 20px;
+    width: 100px;
+    height: 100%;
+}
+/* relative为了定位行首的小光标 */
+.sidebar li{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin :20px 20px 0 20px;
+}
+.sidebar li.active:before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: -19px;
+    top: 27px;
+    width: 2px;
+    height: 4px;
+    background-color: #2399f1;
+    border-radius: 0 2px 2px 0;
+}
+.sidebar footer{
+    position: absolute;
+    bottom: 20px;
+    left:26px;
+}
+.sidebar footer a{
+   display: inline-block; 
+   margin-right: 16px
+}
+
+/* 菜单栏 */
+.sideMenu{
+   width: 250px;
+   position: relative;
+}
+.sideMenu .menu{
+    width: 191px;
+    height: 226px;
+    margin: 30px 30px 23px 29px;
+    border-bottom: 1px solid #2A3547;
+}
+.sideMenu .products{
+    width: 191px;
+    height: 195px;
+    margin: 0 30px 22px 29px;
+    border-bottom: 1px solid #2A3547;
+}
+.sideMenu .dashBoard{
+    width: 191px;
+    height: 203px;
+    margin: 0 30px 0 29px;
+}
+/* relative为了定位行首的小光标 */
+.sideMenu li{
+    position: relative;
+}
+.sideMenu h4{
+    font-size: 12px;
+    font-weight: normal;
+    display: block;
+    height: 17px;
+    width: 191px;
+    margin-bottom: 22px;
+    line-height: 17px;
+    background: url("../images/setting.png") no-repeat center right
+}
+.sideMenu h4 a{
+    color:#5b6779;
+}
+/* 菜单栏 */
+.menu li{
+    margin-bottom: 17px;
+}
+.menu li:last-child{
+    margin-bottom: 30px;
+}
+.menu li a{
+    font-weight: bold;
+}
+
+/* 产品栏 */
+.products li{
+    display: block;
+    margin-bottom: 18px;
+    width: 108px;
+}
+.products li a{
+    padding-left: 29px;
+}
+.products li:nth-child(1){
+    background: url("../images/book.png") no-repeat center left 
+}
+.products li:nth-child(2){
+    background: url("../images/video.png") no-repeat center left 
+}
+.products li:nth-child(3){
+    background: url("../images/video.png") no-repeat center left 
+}
+.products li:nth-child(4){
+    background: url("../images/statistics.png") no-repeat center left 
+}
+
+/* 消息栏 */
+.dashBoard li.active:before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: -27px;
+    top:7px;
+    width: 2px;
+    height: 4px;
+    background-color: #2399f1;
+    border-radius: 0 2px 2px 0;
+}
+.dashBoard li{
+    margin-bottom: 18px;
+}
+
+/* 尾部 */
+.sideMenu footer{
+    width: 187px;
+    height: 31px;
+    position: absolute;
+    bottom: 23px;
+    left:30px;
+}
+.sideMenu footer span{
+    color: #ffffff;
+    font-family: ProximaNova-Semibold;
+    font-size: 13px;
+    cursor: pointer;
+}
+progress
+{
+    width: 190px;
+    height: 4px;
+}
+
+progress::-moz-progress-bar { background: #0064B4; }
+progress::-webkit-progress-bar { background: #e6e6e6; }
+progress::-webkit-progress-value  { background: #0064B4; }

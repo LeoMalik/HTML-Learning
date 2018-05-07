@@ -99,7 +99,7 @@ Object.create({x:1})
 + 访问属性: `Object.attribute` `Object[attribute]`
 + 添加/修改属性:`Object.attr=value`
 + 删除属性:`delete Object.attr`  **注意delete只能删除自身属性,不能删除继承属性**
-+ 访问方法:`Object.functionName` 
++ 访问方法:`Object.functionName()` 
 
 ````js
 var obj2={

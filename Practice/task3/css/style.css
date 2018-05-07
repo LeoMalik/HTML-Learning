@@ -63,7 +63,7 @@ aside{
     position: fixed;
     bottom: 20px;
     left:26px;
-    
+    z-index: 666;
 }
 .sidebar footer a{
    display: inline-block; 
@@ -73,6 +73,8 @@ aside{
 /* 菜单栏 */
 .sideMenu{
    width: 250px;
+   
+   
 }
 .sideMenu .menu{
     width: 191px;

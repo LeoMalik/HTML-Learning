@@ -60,9 +60,10 @@ aside{
     border-radius: 0 2px 2px 0;
 }
 .sidebar footer{
-    position: absolute;
+    position: fixed;
     bottom: 20px;
     left:26px;
+    
 }
 .sidebar footer a{
    display: inline-block; 
@@ -72,7 +73,6 @@ aside{
 /* 菜单栏 */
 .sideMenu{
    width: 250px;
-   position: relative;
 }
 .sideMenu .menu{
     width: 191px;
@@ -159,11 +159,13 @@ aside{
 
 /* 尾部 */
 .sideMenu footer{
-    width: 187px;
+    width: 190px;
     height: 31px;
-    position: absolute;
+    position: fixed;
     bottom: 23px;
-    left:30px;
+    left:115px;
+    /* background: #1d2531; */
+    z-index: 666;
 }
 .sideMenu footer span{
     color: #ffffff;

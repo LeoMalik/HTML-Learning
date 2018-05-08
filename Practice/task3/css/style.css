@@ -16,7 +16,7 @@ li{
 }
 a{
     text-decoration: none;
-    color: #b7c0cd;
+    color: #666f7e;
 }
 body{
     font-family: ProximaNova-Semibold ProximaNova-Regular sans-serif;
@@ -217,7 +217,7 @@ progress::-webkit-progress-value  { background: #0064B4; }
     width: 100%;
     height: 80px;
 }
-.title header span{
+.title header span a{
     font-size: 24px;
     float: left;
     color: #354052;
@@ -268,6 +268,7 @@ progress::-webkit-progress-value  { background: #0064B4; }
     position: relative;
 }
 .search input{
+    padding-left: 10px;
     outline:none;
     border: 1px solid #E6E9EC;
     width: 340px;

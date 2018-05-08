@@ -25,11 +25,14 @@ body{
 .r{
     float:right;
 }
+
+
 /* 左侧工具栏 */
 .toolbar{
     height: 100%;
     width: 350px;
-	background-color: #1d2531;
+    background-color: #1d2531;
+    float: left;
 }
 /* 按钮栏 */
 aside{
@@ -184,3 +187,162 @@ progress
 progress::-moz-progress-bar { background: #0064B4; }
 progress::-webkit-progress-bar { background: #e6e6e6; }
 progress::-webkit-progress-value  { background: #0064B4; }
+
+/* 右半部分自适应 */
+.messages{
+    float: left;
+    width: calc(100% - 350px);
+    height: 100%;
+    
+}
+/* 标题栏 */
+.title{
+    
+    width: 100%;
+	height: 80px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #E6E9EC;
+    float: left;
+}
+.title header{
+    width: 100%;
+    height: 80px;
+}
+.title header span{
+    font-size: 24px;
+    float: left;
+    color: #354052;
+    margin: 28px 0 28px 30px;
+}
+/* 头像框 */
+.title header .profile{
+    width: 204px;
+    height: 58px;
+    float:left;
+    margin:17px 0;
+    position: fixed;
+    right: 31px;
+    background: url(../images/drop_down.png) no-repeat right center;
+}
+.title header .name{
+    padding-bottom: 5px;
+}
+.title header .profile>a{
+    float: left;
+    margin-right: 16px;
+}
+.title header .profile .name a{
+    color: #2399f1;
+    font-size: 16px;
+    font-weight: bold;
+}
+.title header .profile .role{
+    color: #b5b5b5;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* .messages{
+    display: flex
+} */
+/* 搜索框 */
+.message_l{
+    width: 400px;
+    border-right:1px solid #E6E9EC;
+    float: left;
+}
+.search{
+    width: 400px;
+    height: 74px;
+    border-bottom: 1px solid #E6E9EC
+}
+.search input{
+    outline:none;
+    border: 1px solid #E6E9EC;
+    width: 340px;
+    height:36px;
+    margin: 16px 30px;
+    background: url(../images/search.png) no-repeat 300px center;
+}
+
+/* 用户组 */
+.simpleBoxes section{
+    width: 400px;
+    height: 130px;
+    position: relative;
+    border-bottom: 1px solid #E6E9EC;
+}
+.userBox{
+    width: 191px;
+    height: 60px;
+    margin: 15px 199px 0 8px;
+    float:left;
+    
+}
+.userBox>a{
+    float: left;
+    margin-left: 20px;
+    margin-right: 16px;
+}
+.userBox .name{
+    padding-bottom: 5px;
+}
+.userBox .name a{
+    color: #2399f1;
+    font-size: 16px;
+    font-weight: bold;
+}
+.userBox .role{
+    color: #b5b5b5;
+    font-weight: bold;
+    font-size: 13px;
+}
+.userBox span{
+    position: absolute;
+    right: 23px;
+    top:26px;
+    color: #7f8fa4;
+    font-family: ProximaNova-Semibold;
+    font-weight: bold;
+}
+.userBox+p{
+    color: #585d68;
+    padding-left: 29px;
+    font-size: 13px;
+}
+
+/* 用户动态 */
+.message_r{
+    width: calc(100% - 401px);
+    height: 500px;
+    float: left;
+
+}
+.message_r header{
+    height: 75px;
+    position: relative;
+}
+.message_r header span{
+    font-size: 18px;
+    font-weight: bold;
+    margin:27px;
+    color: #585d68;
+    display: inline-block;
+    vertical-align: middle;
+}
+.message_r header .choiceList{
+    position: absolute;
+    
+    right:85px;
+}
+.message_r header .nextPage{
+    position: absolute;
+    top:20px;
+    right:20px;
+}
+.message_r header .choice{
+    position: absolute;
+    top:20px;
+    right:195px;
+}
+

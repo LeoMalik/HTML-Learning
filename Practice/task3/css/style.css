@@ -9,7 +9,13 @@ body{
     min-width: 640px;
 }
 html,body{
-    display:block;position:absolute;left:0px;top:0px;width:100%;height:100%;overflow:hidden;
+    display:block;
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:100%;
+    height:100%;
+    overflow:hidden;
 }
 li{
     list-style: none;

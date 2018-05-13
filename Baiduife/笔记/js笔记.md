@@ -338,4 +338,184 @@ var p={
 
 var result=p&&p.address&&p.address.home
 
-### 第十九课:
+### 第十九课 对象工厂创建对象
+
+````js
+Pfunction personFactory(name,age){
+    return {
+        name:name,
+        age:age;
+    }
+}
+
+var p1=personFactory("Leo",20);
+var p2=personFactory("Bella",20);
+
+````
+
+### 第二十课 js里的对象(prototype属性)
+
+可以把对象的共同的东西放到原型当中去
+
+````js
+function Person(){
+    var age=20;//无效
+    this.age=30;
+    this.name="Leo";
+}
+Person.prototype.headCount=1;//定义父类属性,只有函数才有prototype属性
+var p=new Person();
+var p1=new Person();
+
+````
+
+### 第二十一课 _____proto_____属性
+
+ 对象都有一个__proto__属性,它指向这个对象对应的父级对象,即使父级对象的值临时被改变,改变前创建的对象建立的联系也不变,就是通过这个proto属性联系的
+
+**和prototpye的区别:**函数才有prototype这个属性,对象只有 _____proto_____属性
+
+### 第二十二课 this和this指向的改变
+
++ 谁调用的function谁就是this,直接使用函数的话this相当于是windows
++ this指向的改变:`log.call(o,"name")`通过call来改变this的指向,前一个参数指对像,后面的参数指函数参数
+
+### 第二十三课 new的自定义实现
+
+函数的结构要相等,也就是数据部分和 _____proto_____属性都要相等,也就是说,我们new一个对象的时候,只需要传入对象的构造器,以及数据部分,然后返回一个object就能实现new一个对象的效果了
+
+````js
+function Person(name,age){
+    this.name=name;
+    this.age=age;
+}
+var p1=NEW(Person)("cj",22);
+
+function NEW(f){//f是个构造器函数
+    return function(){//这里采用闭包的原因是为了每次调用NEW的时候重新获取引用,防止f.prototype随时更改
+        var obj={__proto__:f.prototype};
+        f.apply(obj,arguments);
+    	return obj; 
+    }
+}
+````
+
+![](https://ws1.sinaimg.cn/large/c364e082gy1fr5j0j54dtj20un0h311z.jpg)
+
+其实根本没有用到person这个对象,只是调用了它的引用,关系如图
+
+### 第二十四课 封装
+
+定义一个对象:
+
+````js
+function Person(name){
+    //私有变量
+    var age=20;
+    function showAge(){
+        console.log(this.name);
+    }
+    //公有变量
+    this.name=name;
+    this.test=function(){
+        console.log("test");
+        showAge();//公有变量调用私有变量
+    };
+}
+````
+
+这个时候不能达到我们调用私有函数的效果,因为showAge的this指向的是windows,应该改成`showAge.call(this)`
+
+
+
+![](https://ws1.sinaimg.cn/large/c364e082gy1fr5j3pgav2j20ur0iyahw.jpg)![](https://ws1.sinaimg.cn/large/c364e082gy1fr5j42x2msj20vu0crtes.jpg)
+
+### 第二十五课 继承
+
+自建create函数实现继承.
+
+![](https://ws1.sinaimg.cn/large/c364e082ly1fr6jgb3drgj20q70ga0sw.jpg)
+
+````js
+var p={name:"cj"}
+
+function Create(p){
+    var ins;
+    function F(){}
+    F.prototype=p;
+    ins=new F();
+    return ins;
+}
+````
+
+### 第二十六课 原型链
+
+万物皆对象呐...function也可以当做对象来用,..
+
+![](https://ws1.sinaimg.cn/large/c364e082ly1fr6jik8scdj20gs0i30wb.jpg)
+
+### 第二十七课 类的继承
+
+分三步:
+
+1. 创建父类
+2. 创建子类
+3. 建立关系
+4. 构造器的重新指向
+
+````js
+function P(name,person){this.name=name;this.person=person}
+function C(){}
+````
+
+
+
+第一种方法:C.prototype=P.prototype,缺点:子类的属性会传给父类
+
+第二种方法:C.prototype=new P();优点:实现了自类属性的隔离缺点:如果p的属性太多汇总造成内存滥用
+
+第三种方法:
+
+````js
+function F();
+F.prototype=P.prototype;
+C.prototype=new F();
+//也就是
+C.prototype=Object.create(P.prototype);
+//构造器的重新指向
+C.prototype.constructor=C;
+
+````
+
+### 第二十八课 通用的继承方法
+
+````js
+function createEx(Child,Parent){
+    function F(){};
+    F.prototype=Parent.prototype;
+    Child.prototype=new F();
+    //构造器的重新指向
+    child.prototype.constructor=Child;
+    //定义父类调用的接口
+    Child.super=child.base=Parent.prototype;
+}
+function Person(name,age){
+    this.name=name;
+    this.age=age;
+    function eat(){
+        console.log("eating....");
+    }
+}
+
+function Programmer(name,age,title){
+    //继承父类的实例成员
+    Person.apply(this,arguments);
+}
+
+````
+
+必须在prototype重新新指向后再添加属性:
+
+//继承调用父类的私有函数
+
+![](https://ws1.sinaimg.cn/large/c364e082ly1fr77x9l33mj20if07677c.jpg)

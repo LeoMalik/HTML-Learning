@@ -1,0 +1,4 @@
+
+$(selector).on(events, function () {
+    
+});

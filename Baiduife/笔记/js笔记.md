@@ -341,7 +341,7 @@ var result=p&&p.address&&p.address.home
 ### 第十九课 对象工厂创建对象
 
 ````js
-Pfunction personFactory(name,age){
+function personFactory(name,age){
     return {
         name:name,
         age:age;

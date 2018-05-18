@@ -1,22 +1,24 @@
 function diyTrim(str){
     var first=0;
-    var end=str.length;
-    var i=0;
     var j=str.length;
+    var end=j;
+    var i=0;
+    
     while(str.charAt(i)==" "||str.charAt(i)=="　"){
         first++;
         i++;
         if(str.charAt(i)!=" " && str.charAt(i)!="　")
         break;
     }
-    while(str.charAt(j)==" "||str.charAt(j)=="　"){
-        end--;
-        j--;
-        if(str.charAt(j)!=" " && str.charAt(j)!="　")
-        break;
-    }
+    for (var j = end - 1; j >= 0; j--) {
+        // 字符的 Unicode 编码固定不变 半角空格32 全角空格12288
+        if (str[j] && str.charCodeAt(j) !== 32 && str.charCodeAt(j) !== 12288) {
+          endIndex = j;
+          break;
+        }
+      }
     
-    return str.slice(first,end);
+    return str.slice(first,endIndex+1);
 }
 console.log(diyTrim(' a f b    ')); // ->a f b
 console.log(diyTrim('    ffdaf    ')); // ->ffdaf

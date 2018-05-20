@@ -1,240 +1,183 @@
-// var tree = {
-//     "id": 0,
-//     "name": "root",
-//     "left": {
-//         "id": 1,
-//         "name": "Simon",
-//         "left": {
-//             "id": 3,
-//             "name": "Carl",
-//             "left": {
-//                 "id": 7,
-//                 "name": "Lee",
-//                 "left": {
-//                     "id": 11,
-//                     "name": "Fate"
-//                 }
-//             },
-//             "right": {
-//                 "id": 8,
-//                 "name": "Annie",
-//                 "left": {
-//                     "id": 12,
-//                     "name": "Saber"
-//                 }
-//             }
-//         },
-//         "right": {
-//             "id": 4,
-//             "name": "Tony",
-//             "left": {
-//                 "id": 9,
-//                 "name": "Candy"
-//             }
-//         }
-//     },
-//     "right": {
-//         "id": 2,
-//         "name": "right",
-//         "left": {
-//             "id": 5,
-//             "name": "Carl",
-//         },
-//         "right": {
-//             "id": 6,
-//             "name": "Carl",
-//             "right": {
-//                 "id": 10,
-//                 "name": "Kai"
-//             }        
-//         }
-//     }
-// }
+var tree = {
+    "id": 0,
+    "name": "root",
+    "left": {
+        "id": 1,
+        "name": "Simon",
+        "left": {
+            "id": 3,
+            "name": "Carl",
+            "left": {
+                "id": 7,
+                "name": "Lee",
+                "left": {
+                    "id": 11,
+                    "name": "Fate"
+                }
+            },
+            "right": {
+                "id": 8,
+                "name": "Annie",
+                "left": {
+                    "id": 12,
+                    "name": "Saber"
+                }
+            }
+        },
+        "right": {
+            "id": 4,
+            "name": "Tony",
+            "left": {
+                "id": 9,
+                "name": "Candy"
+            }
+        }
+    },
+    "right": {
+        "id": 2,
+        "name": "right",
+        "left": {
+            "id": 5,
+            "name": "Carl",
+        },
+        "right": {
+            "id": 6,
+            "name": "Carl",
+            "right": {
+                "id": 10,
+                "name": "Kai"
+            }        
+        }
+    }
+}
 
 
-// // 遍历
-// function qianxu(object){
-//     if(object!=null){
-//         console.log(object["id"]);
-//         qianxu(object['left']);
-//         qianxu(object['right']);
-//     }
-// }
+// 遍历
+function qianxu(object){
+    if(object!=null){
+        console.log(object["id"]);
+        qianxu(object['left']);
+        qianxu(object['right']);
+    }
+}
 
-// function zhongxu(object){
-//     if(object!=null){
-//         qianxu(object['left']);
-//         console.log(object["id"]);
-//         qianxu(object['right']);
-//     }
-// }
-// function zhongxu(object){
-//     if(object!=null){
-//         qianxu(object['left']);
-//         qianxu(object['right']);
-//         console.log(object["id"]);
-//     }
-// }
+function zhongxu(object){
+    if(object!=null){
+        qianxu(object['left']);
+        console.log(object["id"]);
+        qianxu(object['right']);
+    }
+}
+function zhongxu(object){
+    if(object!=null){
+        qianxu(object['left']);
+        qianxu(object['right']);
+        console.log(object["id"]);
+    }
+}
 
-// // 查找姓名
-// function findIdByName(name){
-//     var stack=[];
-//     function jinzhan(object){
-//         if(object!=null){
-//             stack.push(object);
-//             console.log(object["id"]);
-//             jinzhan(object['left']);
-//             jinzhan(object['right']);
-//         }
-//     } 
-//     jinzhan(tree);
-//     for(var i=0;i<stack.length;i++){
-//         if(stack[i]['name']==name){
-//             console.log(stack[i]['id'])
-//         }
-//     }
-// }
-// findIdByName('Kai');
+// 查找姓名
+function findIdByName(name){
+    var stack=[];
+    function jinzhan(object){
+        if(object!=null){
+            stack.push(object);
+            console.log(object["id"]);
+            jinzhan(object['left']);
+            jinzhan(object['right']);
+        }
+    } 
+    jinzhan(tree);
+    for(var i=0;i<stack.length;i++){
+        if(stack[i]['name']==name){
+            console.log(stack[i]['id'])
+        }
+    }
+}
+findIdByName('Kai');
 
 
-// // 排序
-// var arr=[[22, 63], [16, 60], [7, 44], [26, 35], [10, 14]]
-// console.log(arr.sort(function(a,b){
-//     if(a[1]<b[1]){
-//         return 1;
-//     }
-//     if(a[1]>b[1]){
-//         return -1;
-//     }
-//     return 0;
-// }));
+// 排序
+var arr=[[22, 63], [16, 60], [7, 44], [26, 35], [10, 14]]
+console.log(arr.sort(function(a,b){
+    if(a[1]<b[1]){
+        return 1;
+    }
+    if(a[1]>b[1]){
+        return -1;
+    }
+    return 0;
+}));
 
-// var arr1 = [
-//     {
-//         id: 1,
-//         name: 'candy',
-//         value: 40
-//     }, {
-//         id: 2,
-//         name: 'Simon',
-//         value: 50
-//     }, {
-//         id: 3,
-//         name: 'Tony',
-//         value: 45
-//     }, {
-//         id: 4,
-//         name: 'Annie',
-//         value: 60
-//     }
-// ];
-// console.log(arr1.sort(function(a,b){
-//     if(a['value']<b['value']){
-//         return -1;
-//     }
-//     if(a['value']>b['value']){
-//         return 1;
-//     }
-//     return 0;
-// }));
+var arr1 = [
+    {
+        id: 1,
+        name: 'candy',
+        value: 40
+    }, {
+        id: 2,
+        name: 'Simon',
+        value: 50
+    }, {
+        id: 3,
+        name: 'Tony',
+        value: 45
+    }, {
+        id: 4,
+        name: 'Annie',
+        value: 60
+    }
+];
+console.log(arr1.sort(function(a,b){
+    if(a['value']<b['value']){
+        return -1;
+    }
+    if(a['value']>b['value']){
+        return 1;
+    }
+    return 0;
+}));
 
 // 数据结构的转换
 // 对象转数组
-// var scoreObject = {
-//     "Tony": {
-//         "Math": 95,
-//         "English": 79,
-//         "Music": 68
-//     }, 
-//     "Simon": {
-//         "Math": 100,
-//         "English": 95,
-//         "Music": 98
-//     }, 
-//     "Annie": {
-//         "Math": 54,
-//         "English": 65,
-//         "Music": 88
-//     }
-// }
+var scoreObject = {
+    "Tony": {
+        "Math": 95,
+        "English": 79,
+        "Music": 68
+    }, 
+    "Simon": {
+        "Math": 100,
+        "English": 95,
+        "Music": 98
+    }, 
+    "Annie": {
+        "Math": 54,
+        "English": 65,
+        "Music": 88
+    }
+}
 
 
-// function toArray(obj){
-//     var name=Object.keys(scoreObject);
-//     var result=[];
-//     for(var i=0;i<name.length;i++){
-//         var child=[];
-//         child[i]=[];
-//         child[i].push(name[i]);
-//         var value=Object.keys(scoreObject[name[i]]);
-//         for(var j=0;j<value.length;j++){
-//             // scoreObject[name[i]][j];
-//             child[i].push(scoreObject[name[i]][value[j]]);
-//         }
-//         result.push(child[i]);
-//     }
-//     return result;
-// }
-// console.log(toArray(scoreObject));
+function toArray(obj){
+    var name=Object.keys(scoreObject);
+    var result=[];
+    for(var i=0;i<name.length;i++){
+        var child=[];
+        child[i]=[];
+        child[i].push(name[i]);
+        var value=Object.keys(scoreObject[name[i]]);
+        for(var j=0;j<value.length;j++){
+            // scoreObject[name[i]][j];
+            child[i].push(scoreObject[name[i]][value[j]]);
+        }
+        result.push(child[i]);
+    }
+    return result;
+}
+console.log(toArray(scoreObject));
 
 // 数组转对象
-//  function test() {
-    // var menuArr = [
-    //   [1, "Area1", -1],
-    //   [2, "Area2", -1],
-    //   [3, "Area1-1", 1],
-    //   [4, "Area1-2", 1],
-    //   [5, "Area2-1", 2],
-    //   [6, "Area2-2", 2],
-    //   [7, "Area1-2-3", 4],
-    //   [8, "Area2-2-1", 6],
-    // ];
-//     // 遍历数组组装对象，不处理数据异常情况
-//     var menuObject = {};
-    
-//     // 循环查找父级元素
-//     var objectLoop = function(obj, id) {
-//       // 存放元素
-//       var parent = null;
-//       // 根据id查找key
-//       for(key in obj) {
-//         if (key === id) {
-//           // 存在key但并非对象，需先处理成对象
-//           if (!obj[key]) obj[key] = {};
-//           // 找到后退出循环
-//           parent = obj[key];
-//           break;
-//         } else if (obj[key].subMenu) {
-//           // 继续查找子级
-//           parent = objectLoop(obj[key].subMenu, id);
-//           // 找到后退出循环
-//           if (parent) break;
-//         }
-//       }
-//       return parent;
-//     }
-//     menuArr.map(function(item) {
-//       // key转化为字符串
-//       var keyP = item[2].toString(); // 父级key
-//       var keyC = item[0].toString(); // 数据对应key值
-//       // 查找父级
-//       var parentObj = objectLoop(menuObject, keyP);
-//       // 无父级时，父级为根对象
-//       if (!parentObj) {
-//         menuObject[keyC] = { name: item[1] };
-//       } else {
-//         // 若subMenu非对象，需先处理成对象
-//         if (!parentObj.subMenu) parentObj.subMenu = {};
-//         parentObj.subMenu[keyC] = { name: item[1] };
-//       }
-//     })
-    // console.log('原数组：');
-    // console.log(menuArr);
-    // console.log('新对象：');
-    // console.log(menuObject);
-    // console.log('-----------------------------');
-//   }
-
 function test(){
     var menuArr = [
         [1, "Area1", -1],

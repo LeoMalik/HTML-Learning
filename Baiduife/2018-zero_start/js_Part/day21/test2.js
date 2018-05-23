@@ -94,7 +94,18 @@ function findIdByName(name){
         }
     }
 }
-findIdByName('Kai');
+function findIdByName1(name,object){
+    if(object!=null){
+        if(object['name']==name)
+        {
+            console.log(object.id);
+            flag=false;
+        }
+        findIdByName1(name,object.left);
+        findIdByName1(name,object.right);
+    }
+}
+findIdByName1('Carl',tree);
 
 
 // 排序

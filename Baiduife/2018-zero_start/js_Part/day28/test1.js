@@ -1,45 +1,49 @@
 /// <reference path="../../../../typings/index.d.ts" />
 
 $(document).ready(function () {
-    var input = $('input');
-    var postfixList = ['163.com', 'gmail.com', '126.com', 'qq.com', '263.net'];
-    var list = $('ul');
-    var line=$(".line");
-    var icon=$('.fa-user-o');
-    var close=$('.fa-close');
-    var count=true;
+    var input = $('input'),
+        postfixList = ['163.com', 'gmail.com', '126.com', 'qq.com', '263.net'],
+        list = $('ul'),
+        line = $(".line"),
+        icon = $('.fa-user-o'),
+        close = $('.fa-close');
+
     // 主体程序
     input.focus();
     checkInput();
 
     // 检测是否有输入
     function checkInput() {
-        console.log(input);
+
         // 键盘打字设定值
         input.on('keyup', function (e) {
             getUserInput();
             TogglePrompt();
         });
         // 输入框聚焦
-        input.on('focus',function(){
-            icon.css('opacity','1');
-            line.css('transform',"scaleX(1)");
-            input.attr('placeholder',"please input");
-            close.css('opacity','1');
+        input.on('focus', function () {
+            icon.css('opacity', '1');
+            line.css('transform', "scaleX(1)");
+            input.attr('placeholder', "please input");
+            close.css('opacity', '1');
         });
+
         // 输入框失去焦点
-        input.on('blur',function(){
-            line.css('transform',"scaleX(0)");
-            icon.css('opacity','0.5');
-            close.css('opacity','0');
+        input.on('blur', function () {
+            line.css('transform', "scaleX(0)");
+            icon.css('opacity', '0.5');
+            close.css('opacity', '0');
             input.removeAttr('placeholder');
             list.hide();
         })
-        console.log(close);
-        
-        close.on('click',()=>{input.val("");})
+
+
+        close.on('click', () => {
+            input.val("");
+        })
         // 鼠标点击设定值
         list.delegate('li', 'click', function (e) {
+            console.log(list)
             input.val($(this).text());
             list.hide();
             input.focus();
@@ -52,7 +56,7 @@ $(document).ready(function () {
     function checkKeyCode() {
         // 初始坐标设为0
         var currentIndex = 0;
-        document.onkeyup = function (e) {
+        $(document).keyup(function (e) {
             var li = $('li');
             // 按键判定
 
@@ -76,20 +80,18 @@ $(document).ready(function () {
                 list.hide();
                 input.blur();
                 currentIndex = -1;
-            } 
-            else if(e.keyCode == 27){
+            } else if (e.keyCode == 27) {
                 input.select();
-            }
-            else {
+            } else {
                 currentIndex = 0;
             }
-            console.log(li);
+
             // $('ul li').not(':nth-child(1)').removeClass('active');
             if (currentIndex >= 0) {
                 li.removeClass('active');
                 li[currentIndex].classList.add("active");;
             }
-        };
+        });
     }
 
     // 得到用户输入并加入网页元素添加提示

@@ -1,43 +1,48 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-i{
+
+i {
     position: absolute;
-    top:13px;
-    left:5px;
-    color:white;
+    top: 13px;
+    left: 5px;
+    color: white;
 }
-body{
+
+body {
     font-size: 14px;
     background: purple;
 }
 
-p{
+p {
     width: 300px;
     margin: 20px auto;
     padding-left: 25px;
     font-size: 22px;
     color: #ffff;
 }
-.wrapper{
-    margin: 20px auto;width: 200px;
+
+.wrapper {
+    margin: 20px auto;
+    width: 200px;
     position: relative;
     overflow: hidden;
 }
-input{
+
+input {
     width: 200px;
     height: 40px;
     border: none;
     padding-left: 25px;
     font-size: 17px;
-    outline:none;
+    outline: none;
     background: purple;
     color: #ffff;
 }
 
-.line{
+.line {
     position: absolute;
     width: 200%;
     height: 2px;
@@ -47,14 +52,16 @@ input{
     transition: transform 0.2s linear;
     transform: scaleX(1);
 }
-.fa-close{
+
+.fa-close {
     position: absolute;
     left: 180px;
-    top:13px;
+    top: 13px;
     cursor: pointer;
     transition: all 0.2s linear;
 }
-li{
+
+li {
     list-style: none;
     color: #cccccc;
     height: 27px;
@@ -62,12 +69,15 @@ li{
     padding-left: 12px;
     border: 1px solid rgb(88, 86, 86);
 }
+
 /* #FFC5CF */
-li:hover{
+
+li:hover {
     background: darkcyan;
 }
+
 /* #BDDFED */
-.active{
+
+.active {
     background: salmon;
 }
-

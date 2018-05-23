@@ -14,7 +14,6 @@ $(document).ready(function () {
 
     // 检测是否有输入
     function checkInput() {
-
         // 键盘打字设定值
         input.on('keyup', function (e) {
             getUserInput();
@@ -26,29 +25,39 @@ $(document).ready(function () {
             line.css('transform', "scaleX(1)");
             input.attr('placeholder', "please input");
             close.css('opacity', '1');
+            list.css('opacity', '1');
+            // list.css('visibility','visible');
         });
 
         // 输入框失去焦点
-        input.on('blur', function () {
+        input.on('blur', function (e) {
             line.css('transform', "scaleX(0)");
             icon.css('opacity', '0.5');
             close.css('opacity', '0');
             input.removeAttr('placeholder');
-            list.hide();
-        })
+            list.css('opacity', '0');
+        });
 
 
         close.on('click', () => {
             input.val("");
+            getUserInput();
         })
         // 鼠标点击设定值
-        list.delegate('li', 'click', function (e) {
-            console.log(list)
+        list.delegate('*', 'click', function (e) {
+            console.log(666);
             input.val($(this).text());
-            list.hide();
+            list.css('visibility', 'hidden');
             input.focus();
             e.preventDefault();
         });
+        // $('.active').click(function(e){
+        //     console.log(666);
+        //     input.val($(this).text());
+        //     list.css('visibility','hidden');
+        //     input.focus();
+        //     e.preventDefault();
+        // })
         checkKeyCode();
     }
 
@@ -77,7 +86,7 @@ $(document).ready(function () {
             // 回车
             else if (e.keyCode == 13) {
                 input.val(li[currentIndex].innerText);
-                list.hide();
+                list.css('visibility', 'hidden');
                 input.blur();
                 currentIndex = -1;
             } else if (e.keyCode == 27) {
@@ -142,10 +151,10 @@ $(document).ready(function () {
     function TogglePrompt() {
         var text = input.val().replace(/(^\s*)|(\s*$)/g, "");
         if (text != null && text != "") {
-            list.show();
+            list.css('visibility', 'visible');
             // getUserInput();
         } else {
-            list.hide();
+            list.css('visibility', 'hidden');
         }
     }
 

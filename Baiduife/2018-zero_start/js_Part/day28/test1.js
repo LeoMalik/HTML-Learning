@@ -100,12 +100,12 @@ $(document).ready(function () {
     function getUserInput() {
         // xss防护
         var text = HtmlUtil.htmlEncode(input.val().replace(/(^\s*)|(\s*$)/g, ""));
-            console.log(text);
-            
+        console.log(text);
+
         // var text=HtmlUtil.htmlDecode(textEncode);
         //     console.log(text);
-            // 菜单元素
-            newList = new Array(),
+        // 菜单元素
+        newList = new Array(),
             // 获取@前元素
             index = text.indexOf("@");
         // 高亮元素
@@ -147,10 +147,10 @@ $(document).ready(function () {
 
     // 控制提示菜单的隐显
     function TogglePrompt() {
-         // xss防护
+        // xss防护
         var text = HtmlUtil.htmlEncode(input.val().replace(/(^\s*)|(\s*$)/g, ""));
-            console.log(text);
-            
+        console.log(text);
+
         // var text=HtmlUtil.htmlDecode(textEncode);
         //     console.log(text);
         if (text != null && text != "") {

@@ -7,14 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <script src="test1.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <script src="xss.js"></script>
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
 <body>
     <p>输入后点空白区域查看动画,方向键↑↓或者鼠标点击选择对应邮箱。</p>
     <p>enter选中,esc全选,点击小叉叉删除.自动高亮提示选项。例:输入text@16会自动高亮符合的@163邮箱</p>
+    <p>可预防xss</p>
     <div class="wrapper">
         <i class="fa fa-user-o" aria-hidden="true"></i>
         <input id="email-input" type="text" placeholder="please input">

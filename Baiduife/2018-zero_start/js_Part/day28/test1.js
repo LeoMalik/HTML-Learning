@@ -51,13 +51,6 @@ $(document).ready(function () {
             input.focus();
             e.preventDefault();
         });
-        // $('.active').click(function(e){
-        //     console.log(666);
-        //     input.val($(this).text());
-        //     list.css('visibility','hidden');
-        //     input.focus();
-        //     e.preventDefault();
-        // })
         checkKeyCode();
     }
 
@@ -105,7 +98,12 @@ $(document).ready(function () {
 
     // 得到用户输入并加入网页元素添加提示
     function getUserInput() {
-        var text = input.val().replace(/(^\s*)|(\s*$)/g, ""),
+        // xss防护
+        var text = HtmlUtil.htmlEncode(input.val().replace(/(^\s*)|(\s*$)/g, ""));
+            console.log(text);
+            
+        // var text=HtmlUtil.htmlDecode(textEncode);
+        //     console.log(text);
             // 菜单元素
             newList = new Array(),
             // 获取@前元素
@@ -149,7 +147,12 @@ $(document).ready(function () {
 
     // 控制提示菜单的隐显
     function TogglePrompt() {
-        var text = input.val().replace(/(^\s*)|(\s*$)/g, "");
+         // xss防护
+        var text = HtmlUtil.htmlEncode(input.val().replace(/(^\s*)|(\s*$)/g, ""));
+            console.log(text);
+            
+        // var text=HtmlUtil.htmlDecode(textEncode);
+        //     console.log(text);
         if (text != null && text != "") {
             list.css('visibility', 'visible');
             // getUserInput();

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="test.js"></script>
+    <title>Document</title>
+    <style>
+        .wrapper{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="region">
+            <input type="checkbox" class="checkAll"><span>全选</span>
+            <input type="checkbox"><span>华东</span>
+            <input type="checkbox"><span>华南</span>
+            <input type="checkbox"><span>华北</span>
+        </div>
+        <div id="product">
+            <input type="checkbox" class="checkAll"><span>全选</span>
+            <input type="checkbox"><span>手机</span>
+            <input type="checkbox"><span>电脑</span>
+            <input type="checkbox"><span>音箱</span>
+        </div>
+        <div id="month">
+            <input type="checkbox"><span>1</span>
+            <input type="checkbox"><span>2</span>
+            <input type="checkbox"><span>3</span>
+            <input type="checkbox"><span>4</span>
+            <input type="checkbox"><span>5</span>
+            <input type="checkbox"><span>6</span>
+            <input type="checkbox"><span>7</span>
+            <input type="checkbox"><span>8</span>
+            <input type="checkbox"><span>9</span>
+            <input type="checkbox"><span>10</span>
+            <input type="checkbox"><span>11</span>
+            <input type="checkbox"><span>12</span>
+        </div>
+    </div>
+    <div class="table-wrapper">
+        <table border="1">
+            <tr>
+                <th>商品</th>
+                <th>地区</th>
+                <th>月份</th>
+            </tr>
+            <tr>
+                <td>手机</td>
+                <td>华东</td>
+                <td>1</td>
+            </tr>
+        </table> 
+    </div>
+</body>
+</html>

@@ -1,7 +1,46 @@
+let productData = [{
+    product: "手机",
+    region: "华东",
+    sale: [120, 100, 140, 160, 180, 185, 190, 210, 230, 245, 255, 270]
+}, {
+    product: "手机",
+    region: "华北",
+    sale: [80, 70, 90, 110, 130, 145, 150, 160, 170, 185, 190, 200]
+}, {
+    product: "手机",
+    region: "华南",
+    sale: [220, 200, 240, 250, 260, 270, 280, 295, 310, 335, 355, 380]
+}, {
+    product: "笔记本",
+    region: "华东",
+    sale: [50, 60, 80, 110, 30, 20, 70, 30, 420, 30, 20, 20]
+}, {
+    product: "笔记本",
+    region: "华北",
+    sale: [30, 35, 50, 70, 20, 15, 30, 50, 710, 130, 20, 20]
+}, {
+    product: "笔记本",
+    region: "华南",
+    sale: [80, 120, 130, 140, 70, 75, 120, 90, 550, 120, 110, 100]
+}, {
+    product: "智能音箱",
+    region: "华东",
+    sale: [10, 30, 4, 5, 6, 5, 4, 5, 6, 5, 5, 25]
+}, {
+    product: "智能音箱",
+    region: "华北",
+    sale: [15, 50, 15, 15, 12, 11, 11, 12, 12, 14, 12, 40]
+}, {
+    product: "智能音箱",
+    region: "华南",
+    sale: [10, 40, 10, 6, 5, 6, 8, 6, 6, 6, 7, 26]
+}]
+
+// 主体程序
 $(document).ready(function () {
     var region = $('#region');
     var product = $('#product');
-    var month = $('#month');
+    // var month = $('#month');
     // 全选标签
     var checkAll_region = $('#region .checkAll');
     var checkAll_product = $('#product .checkAll');
@@ -27,7 +66,14 @@ $(document).ready(function () {
         var currentItem = this;
         JudgeCheckBox(false, currentItem);
     });
+    $('button').click(function () {
+        var result = getSearchInput();
+        console.log(result);
+        showTable(result)
+    })
 });
+
+
 
 // 全选框的事件代理
 function JudgeCheckAll(flag, currentItem) {
@@ -87,48 +133,119 @@ function JudgeCheckBox(flag, currentItem) {
     })
 }
 
-function getSearchInput(){
-    var region = $('#region');
-    var product = $('#product');
-    var month = $('#month');
-    var inputList_region = $("#region input:not('.checkAll')");
-    var inputList_product = $("#product input:not('.checkAll')");
-    var inputList_month=$('#month input');
-    var result=new Array(3);
-    
 
-    region.change(function(){
-        getChildren(0,result);
-    })
-    product.change(function(){
-        getChildren(1,result);
-    })
-    month.change(function(){
-        getChildren(2,result);
-    })
-    console.log(result);
+
+// 数据类
+function pData(product, region, sale) {
+    this.product = product;
+    this.region = region;
+    this.sale = sale;
 }
 
-function getChildren(index,result){
-    var inputList=[];
+// 获取用户输入
+function getSearchInput() {
+    // 可批量导入数据
+    var datas = [];
+    // flag为true: 商品第一列,地区第二列,否则相反
+    var flag;
+    var regionCount = 0;
+    var productCount = 0;
+    var Rowspan;
     var inputList_region = $("#region input:not('.checkAll')");
     var inputList_product = $("#product input:not('.checkAll')");
-    var inputList_month=$('#month input');
-    
-    if(index==0){
-        inputList=inputList_region;
+    regionCount = $("#region input:not('.checkAll'):checkbox:checked").length;
+    productCount = $("#product input:not('.checkAll'):checkbox:checked").length;
+    regionCount > productCount ? Rowspan = regionCount : Rowspan = productCount;
+
+    // 获取排序方式,flag为true: 商品第一列,地区第二列,否则相反
+    if ((regionCount > 1 && productCount > 1) || (regionCount == 1 && productCount == 1)) {
+        flag = true;
+    } else if (regionCount == 1 && productCount > 1) {
+        flag = false;
+    }else{
+        flag=true;
     }
-    else if(index==1){
-        inputList=inputList_product;
-    }
-    else if(index==2){
-        inputList=inputList_month;
-    }
-    var children=[];
-    inputList.each(function(){
-        if ($(this).prop('checked') == true){
-            children.push($(this).val());
+
+    // 导入用户选择
+    inputList_region.each(function (index, element1) {
+        if ($(this).prop('checked') == true) {
+            inputList_product.each(function (index, element2) {
+                if ($(this).prop('checked') == true) {
+                    datas.push(new pData(element2.value, element1.value, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]));
+                }
+            })
         }
     });
-    result[index]=children;
+
+    // 利用datas去重,判断勾选地区和产品的数量,同样可以达到判断排序方式和rowspan的问题,这样就可以传入一组数据直接开搞(懒了,省略)
+
+
+
+    
+    // 返回特定属性值的对象
+    return {
+        data: datas,
+        order: flag,
+        rowspan: Rowspan
+    }
+}
+
+
+function showTable(datas) {
+    var order = datas.order;
+    var data = datas.data;
+    var rowspan = datas.rowspan;
+    var innerHtml1 = "";
+    var rowspanArray = [];
+    var rowspanIndex = 1;
+    if (order == true) {
+        tableTitle = "<tr><th>商品</th><th>地区</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></tr>";
+        // 按照产品对应三个地区来排序
+        data=data.sort(function(a,b){
+            if(a.product<b.product)
+            return -1;
+            else if(a.product>b.product)
+            return 1;
+            else
+            return 0;
+        });
+        console.log(datas);
+        data.forEach(function (item, index) {
+            // 数组去重
+            if ($.inArray(item.product, rowspanArray) == -1) {
+                rowspanArray.push(item.product);
+            }
+            var monthData = "";
+            for (each in item.sale) {
+                monthData += "<td>" + each + "</td>";
+            }
+            innerHtml1 += "<tr><td>" + item.region + "</td>" + monthData + "</tr>";
+        });
+        $('table').html(tableTitle + innerHtml1);
+        rowspanArray.forEach(function (item, index) {
+            var test = 2 + parseInt(index) * rowspan;
+            var selector = 'table tr:nth-child(' + test + ')';
+            $(selector).prepend("<td rowspan=" + rowspan + ">" + item + "</td>");
+        });
+    } else {
+        tableTitle = "<tr><th>地区</th><th>商品</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></tr>";
+        console.log(datas);
+        data.forEach(function (item, index) {
+            // 数组去重
+            if ($.inArray(item.region, rowspanArray) == -1) {
+                rowspanArray.push(item.region);
+            }
+            var monthData = "";
+            for (each in item.sale) {
+                monthData += "<td>" + each + "</td>";
+            }
+            innerHtml1 += "<tr><td>" + item.product + "</td>" + monthData + "</tr>";
+        });
+        $('table').html(tableTitle + innerHtml1);
+        rowspanArray.forEach(function (item, index) {
+            var test = 2 + parseInt(index) * rowspan;
+            var selector = 'table tr:nth-child(' + test + ')';
+            $(selector).prepend("<td rowspan=" + rowspan + ">" + item + "</td>");
+        });
+    }
 }

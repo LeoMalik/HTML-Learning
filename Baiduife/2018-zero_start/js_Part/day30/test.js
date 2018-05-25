@@ -1,13 +1,16 @@
 $(document).ready(function () {
     var region = $('#region');
     var product = $('#product');
-    var month = $('month');
+    var month = $('#month');
     // 全选标签
     var checkAll_region = $('#region .checkAll');
     var checkAll_product = $('#product .checkAll');
     var inputList_region = $("#region input:not('.checkAll')");
     var inputList_product = $("#product input:not('.checkAll')");
+    // 获取用户提交的查询
+    getSearchInput();
 
+    // checkbox框的事件代理
     checkAll_region.click(function () {
         var currentItem = this;
         JudgeCheckAll(true, currentItem);
@@ -26,7 +29,7 @@ $(document).ready(function () {
     });
 });
 
-// 全选框
+// 全选框的事件代理
 function JudgeCheckAll(flag, currentItem) {
     var inputList_region = $("#region input:not('.checkAll')");
     var inputList_product = $("#product input:not('.checkAll')");
@@ -49,7 +52,7 @@ function JudgeCheckAll(flag, currentItem) {
     }
 }
 
-// 普通框
+// 普通框的事件代理
 function JudgeCheckBox(flag, currentItem) {
     // 统计选中数目s
     var checkCount = 0;
@@ -74,11 +77,7 @@ function JudgeCheckBox(flag, currentItem) {
     }
     inputList.each(function () {
         console.log($(this).prop('checked'));
-        if ($(this).prop('checked') == true) {
-            checkCount++;
-        } else {
-            notCheckCount++;
-        }
+        ($(this).prop('checked') == true) ? checkCount++ : notCheckCount++;
         // 全选框的操作
         (checkCount == inputList.length) ? checkAll.prop('checked', true): checkAll.prop('checked', false);
         // 只要一个选中
@@ -86,4 +85,50 @@ function JudgeCheckBox(flag, currentItem) {
             currentItem.checked = true;
         }
     })
+}
+
+function getSearchInput(){
+    var region = $('#region');
+    var product = $('#product');
+    var month = $('#month');
+    var inputList_region = $("#region input:not('.checkAll')");
+    var inputList_product = $("#product input:not('.checkAll')");
+    var inputList_month=$('#month input');
+    var result=new Array(3);
+    
+
+    region.change(function(){
+        getChildren(0,result);
+    })
+    product.change(function(){
+        getChildren(1,result);
+    })
+    month.change(function(){
+        getChildren(2,result);
+    })
+    console.log(result);
+}
+
+function getChildren(index,result){
+    var inputList=[];
+    var inputList_region = $("#region input:not('.checkAll')");
+    var inputList_product = $("#product input:not('.checkAll')");
+    var inputList_month=$('#month input');
+    
+    if(index==0){
+        inputList=inputList_region;
+    }
+    else if(index==1){
+        inputList=inputList_product;
+    }
+    else if(index==2){
+        inputList=inputList_month;
+    }
+    var children=[];
+    inputList.each(function(){
+        if ($(this).prop('checked') == true){
+            children.push($(this).val());
+        }
+    });
+    result[index]=children;
 }

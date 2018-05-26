@@ -1,3 +1,4 @@
+// 测试数据
 let productData = [{
     product: "手机",
     region: "华东",
@@ -148,24 +149,23 @@ function getSearchInput() {
     var datas = [];
     // flag为true: 商品第一列,地区第二列,否则相反
     var flag;
-    var regionCount = 0;
-    var productCount = 0;
+    var regionCount;
+    var productCount;
     var Rowspan;
     var inputList_region = $("#region input:not('.checkAll')");
     var inputList_product = $("#product input:not('.checkAll')");
     regionCount = $("#region input:not('.checkAll'):checkbox:checked").length;
     productCount = $("#product input:not('.checkAll'):checkbox:checked").length;
-    regionCount > productCount ? Rowspan = regionCount : Rowspan = productCount;
-
+    // regionCount > productCount ? Rowspan = regionCount : Rowspan = productCount;
     // 获取排序方式,flag为true: 商品第一列,地区第二列,否则相反
     if ((regionCount > 1 && productCount > 1) || (regionCount == 1 && productCount == 1)) {
         flag = true;
     } else if (regionCount == 1 && productCount > 1) {
         flag = false;
-    }else{
-        flag=true;
+    } else {
+        flag = true;
     }
-
+    flag == true ? Rowspan = regionCount : Rowspan = productCount;
     // 导入用户选择
     inputList_region.each(function (index, element1) {
         if ($(this).prop('checked') == true) {
@@ -177,20 +177,40 @@ function getSearchInput() {
         }
     });
 
-    // 利用datas去重,判断勾选地区和产品的数量,同样可以达到判断排序方式和rowspan的问题,这样就可以传入一组数据直接开搞(懒了,省略)
-
-
-
-    
     // 返回特定属性值的对象
     return {
         data: datas,
         order: flag,
         rowspan: Rowspan
     }
+    // // 利用datas去重,判断勾选地区和产品的数量,同样可以达到判断排序方式和rowspan的问题,这样就可以传入一组数据直接开搞(懒了,省略)
+    // var regionArray=[];
+    // var productArray=[];
+    // // console.log(datas);
+    // datas.forEach(function (item, index) {
+    //     // 数组去重
+    //     if ($.inArray(item.product, productArray) == -1) {
+    //         productArray.push(item.product);
+    //     }
+    //     if ($.inArray(item.region, regionArray) == -1) {
+    //         regionArray.push(item.region);
+    //     }      
+    // });
+    // regionCount=regionArray.length;
+    // productCount=productArray.length;
+    // regionCount > productCount ? Rowspan = regionCount : Rowspan = productCount;
+    // 获取排序方式,flag为true: 商品第一列,地区第二列,否则相反
+    // if ((regionCount > 1 && productCount > 1) || (regionCount == 1 && productCount == 1)) {
+    //     flag = true;
+    // } else if (regionCount == 1 && productCount > 1) {
+    //     flag = false;
+    // } else {
+    //     flag = true;
+    // }
+
 }
 
-
+// 拼接表格(没做简化 懒了= =)
 function showTable(datas) {
     var order = datas.order;
     var data = datas.data;
@@ -201,13 +221,13 @@ function showTable(datas) {
     if (order == true) {
         tableTitle = "<tr><th>商品</th><th>地区</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></tr>";
         // 按照产品对应三个地区来排序
-        data=data.sort(function(a,b){
-            if(a.product<b.product)
-            return -1;
-            else if(a.product>b.product)
-            return 1;
+        data = data.sort(function (a, b) {
+            if (a.product < b.product)
+                return -1;
+            else if (a.product > b.product)
+                return 1;
             else
-            return 0;
+                return 0;
         });
         console.log(datas);
         data.forEach(function (item, index) {
@@ -215,17 +235,12 @@ function showTable(datas) {
             if ($.inArray(item.product, rowspanArray) == -1) {
                 rowspanArray.push(item.product);
             }
+            // 导入每月的销售数据
             var monthData = "";
-            for (each in item.sale) {
-                monthData += "<td>" + each + "</td>";
+            for (var i = 0; i < item.sale.length; i++) {
+                monthData += "<td>" + item.sale[i] + "</td>";
             }
             innerHtml1 += "<tr><td>" + item.region + "</td>" + monthData + "</tr>";
-        });
-        $('table').html(tableTitle + innerHtml1);
-        rowspanArray.forEach(function (item, index) {
-            var test = 2 + parseInt(index) * rowspan;
-            var selector = 'table tr:nth-child(' + test + ')';
-            $(selector).prepend("<td rowspan=" + rowspan + ">" + item + "</td>");
         });
     } else {
         tableTitle = "<tr><th>地区</th><th>商品</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></tr>";
@@ -235,17 +250,20 @@ function showTable(datas) {
             if ($.inArray(item.region, rowspanArray) == -1) {
                 rowspanArray.push(item.region);
             }
+            // 导入每月的销售数据
             var monthData = "";
-            for (each in item.sale) {
-                monthData += "<td>" + each + "</td>";
+            for (var i = 0; i < item.sale.length; i++) {
+                monthData += "<td>" + item.sale[i] + "</td>";
             }
             innerHtml1 += "<tr><td>" + item.product + "</td>" + monthData + "</tr>";
         });
-        $('table').html(tableTitle + innerHtml1);
-        rowspanArray.forEach(function (item, index) {
-            var test = 2 + parseInt(index) * rowspan;
-            var selector = 'table tr:nth-child(' + test + ')';
-            $(selector).prepend("<td rowspan=" + rowspan + ">" + item + "</td>");
-        });
     }
+    $('table').html(tableTitle + innerHtml1);
+
+    // 增加rowsapn
+    rowspanArray.forEach(function (item, index) {
+        var test = 2 + parseInt(index) * rowspan;
+        var selector = 'table tr:nth-child(' + test + ')';
+        $(selector).prepend("<td rowspan=" + rowspan + ">" + item + "</td>");
+    });
 }

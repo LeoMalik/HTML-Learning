@@ -219,7 +219,7 @@ function showTable(datas) {
     var rowspanArray = [];
     var rowspanIndex = 1;
     if (order == true) {
-        tableTitle = "<tr><th>商品</th><th>地区</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></tr>";
+        tableTitle = "<thead class='bg-info'><th>地区</th><th>商品</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></thead>";
         // 按照产品对应三个地区来排序
         data = data.sort(function (a, b) {
             if (a.product < b.product)
@@ -243,7 +243,7 @@ function showTable(datas) {
             innerHtml1 += "<tr><td>" + item.region + "</td>" + monthData + "</tr>";
         });
     } else {
-        tableTitle = "<tr><th>地区</th><th>商品</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></tr>";
+        tableTitle = "<thead class='bg-info'><th>地区</th><th>商品</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></thead>";
         console.log(datas);
         data.forEach(function (item, index) {
             // 数组去重
@@ -258,12 +258,12 @@ function showTable(datas) {
             innerHtml1 += "<tr><td>" + item.product + "</td>" + monthData + "</tr>";
         });
     }
-    $('table').html(tableTitle + innerHtml1);
+    $('table').html(tableTitle +"<tbody>"+ innerHtml1+"</tbody>");
 
     // 增加rowsapn
     rowspanArray.forEach(function (item, index) {
-        var test = 2 + parseInt(index) * rowspan;
-        var selector = 'table tr:nth-child(' + test + ')';
+        var test = 1 + parseInt(index) * rowspan;
+        var selector = 'tbody tr:nth-child(' + test + ')';
         $(selector).prepend("<td rowspan=" + rowspan + ">" + item + "</td>");
     });
 }

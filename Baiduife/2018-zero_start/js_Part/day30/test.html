@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="test.js"></script>
     <title>Document</title>
     <style>
@@ -21,7 +23,7 @@
             margin-top: 20px;
         }
 
-        button {
+        .wrapper+button {
             display: block;
             width: 100px;
             margin: 20px auto;
@@ -52,12 +54,13 @@
             <span>音箱</span>
         </div>
     </div>
-    <button>查询</button>
+    <button class="btn btn-primary">查询</button>
     <div class="table-wrapper">
-        <table border="1">
-            <tr>
-                <th>商品</th>
+        <table border="1" class="table table-hover">
+            <thead class="bg-info">
+
                 <th>地区</th>
+                <th>商品</th>
                 <th>1月</th>
                 <th>2月</th>
                 <th>3月</th>
@@ -70,7 +73,8 @@
                 <th>10月</th>
                 <th>11月</th>
                 <th>12月</th>
-            </tr>
+
+            </thead>
         </table>
     </div>
 </body>

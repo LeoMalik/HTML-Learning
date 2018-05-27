@@ -37,6 +37,8 @@ let productData = [{
     sale: [10, 40, 10, 6, 5, 6, 8, 6, 6, 6, 7, 26]
 }]
 
+
+
 // 主体程序
 $(document).ready(function () {
     var region = $('#region');
@@ -78,6 +80,7 @@ $(document).ready(function () {
 
 // 全选框的事件代理
 function JudgeCheckAll(flag, currentItem) {
+    var inputList;
     var inputList_region = $("#region input:not('.checkAll')");
     var inputList_product = $("#product input:not('.checkAll')");
     // true为地点代理

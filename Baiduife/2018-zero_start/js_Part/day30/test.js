@@ -144,8 +144,67 @@ function getSearchInput() {
         order: flag,
         rowspan: Rowspan
     }
+}
 
-    // // 测试数据
+// 拼接表格(没做简化 懒了= =)
+function showTable(datas) {
+    var order = datas.order;
+    var data = datas.data;
+    var rowspan = datas.rowspan;
+    var innerHtml1 = "";
+    var rowspanArray = [];
+    var tableTitle="";
+    if (order == true) {
+        tableTitle = "<thead class='bg-info'><th>地区</th><th>商品</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></thead>";
+        // 按照产品对应三个地区来排序
+        data = data.sort(function (a, b) {
+            if (a.product < b.product)
+                return -1;
+            else if (a.product > b.product)
+                return 1;
+            else
+                return 0;
+        });
+        console.log(datas);
+        data.forEach(function (item, index) {
+            // 数组去重
+            if ($.inArray(item.product, rowspanArray) == -1) {
+                rowspanArray.push(item.product);
+            }
+            // 导入每月的销售数据
+            var monthData = "";
+            for (var i = 0; i < item.sale.length; i++) {
+                monthData += "<td>" + item.sale[i] + "</td>";
+            }
+            innerHtml1 += "<tr><td>" + item.region + "</td>" + monthData + "</tr>";
+        });
+    } else {
+        tableTitle = "<thead class='bg-info'><th>地区</th><th>商品</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></thead>";
+        console.log(datas);
+        data.forEach(function (item, index) {
+            // 数组去重
+            if ($.inArray(item.region, rowspanArray) == -1) {
+                rowspanArray.push(item.region);
+            }
+            // 导入每月的销售数据
+            var monthData = "";
+            for (var i = 0; i < item.sale.length; i++) {
+                monthData += "<td>" + item.sale[i] + "</td>";
+            }
+            innerHtml1 += "<tr><td>" + item.product + "</td>" + monthData + "</tr>";
+        });
+    }
+    $('table').html(tableTitle +"<tbody>"+ innerHtml1+"</tbody>");
+
+    // 增加rowsapn
+    rowspanArray.forEach(function (item, index) {
+        var test = 1 + parseInt(index) * rowspan;
+        var selector = 'tbody tr:nth-child(' + test + ')';
+        $(selector).prepend("<td rowspan=" + rowspan + ">" + item + "</td>");
+    });
+}
+
+// // 测试数据
     // let productData = [{
     //     product: "手机",
     //     region: "华东",
@@ -208,63 +267,3 @@ function getSearchInput() {
     // } else {
     //     flag = true;
     // }
-
-}
-
-// 拼接表格(没做简化 懒了= =)
-function showTable(datas) {
-    var order = datas.order;
-    var data = datas.data;
-    var rowspan = datas.rowspan;
-    var innerHtml1 = "";
-    var rowspanArray = [];
-    var tableTitle="";
-    if (order == true) {
-        tableTitle = "<thead class='bg-info'><th>地区</th><th>商品</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></thead>";
-        // 按照产品对应三个地区来排序
-        data = data.sort(function (a, b) {
-            if (a.product < b.product)
-                return -1;
-            else if (a.product > b.product)
-                return 1;
-            else
-                return 0;
-        });
-        console.log(datas);
-        data.forEach(function (item, index) {
-            // 数组去重
-            if ($.inArray(item.product, rowspanArray) == -1) {
-                rowspanArray.push(item.product);
-            }
-            // 导入每月的销售数据
-            var monthData = "";
-            for (var i = 0; i < item.sale.length; i++) {
-                monthData += "<td>" + item.sale[i] + "</td>";
-            }
-            innerHtml1 += "<tr><td>" + item.region + "</td>" + monthData + "</tr>";
-        });
-    } else {
-        tableTitle = "<thead class='bg-info'><th>地区</th><th>商品</th><th>1月</th><th>2月</th><th>3月</th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>11月</th><th>12月</th></thead>";
-        console.log(datas);
-        data.forEach(function (item, index) {
-            // 数组去重
-            if ($.inArray(item.region, rowspanArray) == -1) {
-                rowspanArray.push(item.region);
-            }
-            // 导入每月的销售数据
-            var monthData = "";
-            for (var i = 0; i < item.sale.length; i++) {
-                monthData += "<td>" + item.sale[i] + "</td>";
-            }
-            innerHtml1 += "<tr><td>" + item.product + "</td>" + monthData + "</tr>";
-        });
-    }
-    $('table').html(tableTitle +"<tbody>"+ innerHtml1+"</tbody>");
-
-    // 增加rowsapn
-    rowspanArray.forEach(function (item, index) {
-        var test = 1 + parseInt(index) * rowspan;
-        var selector = 'tbody tr:nth-child(' + test + ')';
-        $(selector).prepend("<td rowspan=" + rowspan + ">" + item + "</td>");
-    });
-}

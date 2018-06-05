@@ -56,4 +56,3 @@ function JudgeCheckBox(flag, currentItem) {
         }
     })
 }
-

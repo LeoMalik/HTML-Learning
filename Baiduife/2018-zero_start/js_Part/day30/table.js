@@ -1,5 +1,3 @@
-
-
 // 数据类
 function pData(product, region, sale) {
     this.product = product;
@@ -9,25 +7,25 @@ function pData(product, region, sale) {
 
 // 获取用户输入
 function getSearchInput(datas) {
-    var temp=datas.slice();
+    var temp = datas.slice();
     // flag为true: 商品第一列,地区第二列,否则相反
     var flag;
     var regionCount;
     var productCount;
     var Rowspan;
-    
+
     // 返回用户选择temp
-    var checked_region_Array=[];
-    var checked_product_Array=[];
+    var checked_region_Array = [];
+    var checked_product_Array = [];
     var inputList_region = $("#region input:not('.checkAll'):checkbox:checked");
     var inputList_product = $("#product input:not('.checkAll'):checkbox:checked");
-    inputList_region.each(function(index,ele){
+    inputList_region.each(function (index, ele) {
         checked_region_Array.push(ele.value);
     });
-    inputList_product.each(function(index,ele){
+    inputList_product.each(function (index, ele) {
         checked_product_Array.push(ele.value);
     });
-    
+
 
     // 利用datas去重,判断勾选地区和产品的数量
     var regionArray = [];
@@ -35,24 +33,24 @@ function getSearchInput(datas) {
     // console.log(datas);
 
     // 用户有选择
-    if(inputList_region.length!=0 && inputList_product.length!=0){
+    if (inputList_region.length != 0 && inputList_product.length != 0) {
         temp.forEach(function (item, index) {
-            if($.inArray(item.product, checked_product_Array) == -1){
+            if ($.inArray(item.product, checked_product_Array) == -1) {
                 delete temp[index];
             }
-            if($.inArray(item.region, checked_region_Array) == -1){
+            if ($.inArray(item.region, checked_region_Array) == -1) {
                 delete temp[index];
             }
         });
         console.log(temp);
     }
-    temp=temp.filter(function(val){
+    temp = temp.filter(function (val) {
         return !(!val || val === "");
     });
 
 
 
-    temp.forEach(function(item,index){
+    temp.forEach(function (item, index) {
         // 数组去重
         if ($.inArray(item.product, productArray) == -1) {
             productArray.push(item.product);
@@ -68,13 +66,13 @@ function getSearchInput(datas) {
     //  获取排序方式,flag为true: 商品第一列,地区第二列,否则相反
     if ((regionCount > 1 && productCount > 1) || (regionCount == 1 && productCount == 1)) {
         flag = true;
-        Rowspan=regionCount;
+        Rowspan = regionCount;
     } else if (regionCount == 1 && productCount > 1) {
         flag = false;
         Rowspan = productCount;
     } else {
         flag = true;
-        Rowspan=regionCount;
+        Rowspan = regionCount;
     }
 
 
@@ -87,22 +85,22 @@ function getSearchInput(datas) {
     return object;
 }
 
-function tableHover(data){
+function tableHover(data) {
     console.log($('#body'));
-    $('#body').delegate('tr','mouseenter',function(e){
-        setSvg(data,$(this).index());
-        setCanvas(data,$(this).index(),true);
+    $('#body').delegate('tr', 'mouseenter', function (e) {
+        setSvg(data, $(this).index());
+        setCanvas(data, $(this).index(), true);
         e.preventDefault();
     });
-    $('#body').delegate('tr','mouseleave',function(e){
-        var c=document.getElementById("canvas");
-        c.height=c.height;
+    $('#body').delegate('tr', 'mouseleave', function (e) {
+        var c = document.getElementById("canvas");
+        c.height = c.height;
         e.preventDefault();
     });
     // 多曲线
-    $('#body').mouseleave(function(){
-        for(var i=0;i<12;i++){
-            setCanvas(data,i,false);
+    $('#body').mouseleave(function () {
+        for (var i = 0; i < 12; i++) {
+            setCanvas(data, i, false);
         }
     })
 }
@@ -168,5 +166,3 @@ function showTable(datas) {
     // 鼠标滑过事件
     tableHover(data);
 }
-
-

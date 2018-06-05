@@ -78,22 +78,13 @@ $(document).ready(function () {
         // }
         // else{
         showTable(result);
-        setSvg(result.data,0);
-        setCanvas(result.data,0,true);
+        setSvg(result.data, 0);
+        setCanvas(result.data, 0, true);
         $('tr').trigger('mouseleave');
         $('#body').trigger('mouseleave');
         // }
         // localStorage.clear();
     })
-    
+
     $('button').trigger('click');
 });
-
-
-
-
-
-
-
-
-

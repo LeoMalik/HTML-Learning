@@ -32,7 +32,8 @@
             width: 100px;
             margin: 20px auto;
         }
-        .charts{
+
+        .charts {
             display: flex;
             justify-content: space-around;
         }
@@ -42,24 +43,32 @@
 <body>
     <div class="wrapper">
         <div id="region">
-            
-            <label><input type="checkbox" class="checkAll">全选</label>
-            
-            <label><input type="checkbox" value='华东'>华东</label>
-           
-            <label><input type="checkbox" value='华南'>华南</label>
-            
-            <label><input type="checkbox" value='华北'>华北</label>
+
+            <label>
+                <input type="checkbox" class="checkAll">全选</label>
+
+            <label>
+                <input type="checkbox" value='华东'>华东</label>
+
+            <label>
+                <input type="checkbox" value='华南'>华南</label>
+
+            <label>
+                <input type="checkbox" value='华北'>华北</label>
         </div>
         <div id="product">
-            
-            <label><input type="checkbox" class="checkAll">全选</label>
-            
-            <label><input type="checkbox" value='手机'>手机</label>
-            
-            <label><input type="checkbox" value='笔记本'>笔记本</label>
-            
-            <label><input type="checkbox" value='智能音箱'>智能音箱</label>
+
+            <label>
+                <input type="checkbox" class="checkAll">全选</label>
+
+            <label>
+                <input type="checkbox" value='手机'>手机</label>
+
+            <label>
+                <input type="checkbox" value='笔记本'>笔记本</label>
+
+            <label>
+                <input type="checkbox" value='智能音箱'>智能音箱</label>
         </div>
     </div>
     <button class="btn btn-primary">查询</button>
@@ -88,15 +97,15 @@
     </div>
     <div class="charts">
         <svg id="svg" xmlns="http://www.w3.org/2000/svg" version="1.1" height="700" width="700">
-            <line x1="50" x2="50"  y1="50"  y2="650" stroke-width="2" style="stroke:black"/>
-            <line x1="50" x2="650" y1="650" y2="650" stroke-width="2" style="stroke:black"/>
+            <line x1="50" x2="50" y1="50" y2="650" stroke-width="2" style="stroke:black" />
+            <line x1="50" x2="650" y1="650" y2="650" stroke-width="2" style="stroke:black" />
             <!-- 三角形箭头 -->
-            <path d="M60 60 L40 60 L50 40 Z"/>
-            <path d="M650 640 L650 660 L670 650 Z"/>
+            <path d="M60 60 L40 60 L50 40 Z" />
+            <path d="M650 640 L650 660 L670 650 Z" />
         </svg>
         <canvas id="canvas" width="700" height="700"></canvas>
     </div>
-    
+
 </body>
 
 </html>

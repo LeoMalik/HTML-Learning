@@ -94,40 +94,50 @@ function setSvg(data,index){
     }
 }
 
-function setCanvas(data,index){
+function setCanvas(data,index,flag){
     var c=document.getElementById("canvas");
     var ctx=c.getContext('2d');
     var cty=c.getContext('2d');
     var ct_triangle1=c.getContext('2d');
     var ct_triangle2=c.getContext('2d');
-    c.height=c.height;
+    var ct_listener=c.getContext('2d');
+    var ct_com=c.getContext('2d');
+    var ct_phone=c.getContext('2d');
+    // reset
+    flag==true?c.height=c.height:console.log(flag);
 
     var x=50;
     var month=1;
     var y=0;
     var y_scale;
 
-    ctx.beginPath();
-    cty.beginPath();
-    ct_triangle1.beginPath();
-    ct_triangle2.beginPath();
+    
 
+    ctx.beginPath();
     ctx.moveTo(50,50);
     ctx.lineTo(50,650);
-    ctx.stroke();
     ctx.closePath();
+    cty.strokeStyle="black";
+    ctx.stroke();
+    
 
+    cty.beginPath();
     cty.moveTo(50,650);
     cty.lineTo(650,650);
-    cty.stroke();
     cty.closePath();
+    cty.strokeStyle="black"
+    cty.stroke();
+    
 
+
+    ct_triangle1.beginPath();
     ct_triangle1.moveTo(60,60);
     ct_triangle1.lineTo(40,60);
     ct_triangle1.lineTo(50,40);
     ct_triangle1.fill();
     ct_triangle1.closePath();
 
+    ct_triangle2.beginPath();
     ct_triangle2.moveTo(650,640);
     ct_triangle2.lineTo(650,660);
     ct_triangle2.lineTo(670,650);
@@ -135,13 +145,17 @@ function setCanvas(data,index){
     ct_triangle2.closePath();
 
     // y轴自适应
-    if(data[index].sale[0]<20){
+    if(data[index].product=="智能音箱"){
         y_scale=10;
     }
     else{
         y_scale=1;
     }
 
+    // 左上角提示/缩放恢复
+    if(flag==false){
+        y_scale=1;
+    }
     for(var i=0;i<12;i++){
        
         // 对齐线
@@ -168,11 +182,22 @@ function setCanvas(data,index){
         // 折线
         var ct_Line=c.getContext('2d');
         ct_Line.beginPath();
-        i==0?ct_Line.moveTo(50,650):ct_Line.moveTo(x-50,(650-(data[index].sale[i-1])*y_scale));
+        
+        i==0?ct_Line.moveTo(50,650):ct_Line.lineTo(x-50,(650-(data[index].sale[i-1])*y_scale));
+        
         ct_Line.lineTo(x,(650-(data[index].sale[i])*y_scale));
-        ct_Line.strokeStyle="#60ACFC"
-        ct_Line.stroke();
+        if(data[index].product=="笔记本"){
+            ct_Line.strokeStyle="#60ACFC";
+        }
+        else if(data[index].product=="智能音箱"){
+            ct_Line.strokeStyle="red";
+        }
+        else{
+            ct_Line.strokeStyle="orange";
+        }
         ct_Line.closePath();
+        ct_Line.stroke();
+        
 
         // 圆点
         var ctPoint=c.getContext('2d');
@@ -180,6 +205,7 @@ function setCanvas(data,index){
         ctPoint.arc(x,(650-(data[index].sale[i])*y_scale),3,0,2*Math.PI);
         // ctPoint.fillStyle="#60ACFC"
         ctPoint.fill();
+        ctPoint.closePath();
     }
    
 }

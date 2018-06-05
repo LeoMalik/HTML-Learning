@@ -22,7 +22,7 @@ let productData = [{
 }, {
     product: "笔记本",
     region: "华南",
-    sale: [80, 120, 130, 140, 70, 75, 120, 90, 550, 120, 110, 100]
+    sale: [78, 120, 130, 140, 70, 75, 120, 90, 550, 120, 110, 100]
 }, {
     product: "智能音箱",
     region: "华东",
@@ -79,7 +79,9 @@ $(document).ready(function () {
         // else{
         showTable(result);
         setSvg(result.data,0);
-        setCanvas(result.data,0);
+        setCanvas(result.data,0,true);
+        $('tr').trigger('mouseleave');
+        $('#body').trigger('mouseleave');
         // }
         // localStorage.clear();
     })

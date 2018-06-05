@@ -16,7 +16,7 @@ function getSearchInput(datas) {
     var productCount;
     var Rowspan;
     
-    // 用户选择
+    // 返回用户选择temp
     var checked_region_Array=[];
     var checked_product_Array=[];
     var inputList_region = $("#region input:not('.checkAll'):checkbox:checked");
@@ -33,6 +33,8 @@ function getSearchInput(datas) {
     var regionArray = [];
     var productArray = [];
     // console.log(datas);
+
+    // 用户有选择
     if(inputList_region.length!=0 && inputList_product.length!=0){
         temp.forEach(function (item, index) {
             if($.inArray(item.product, checked_product_Array) == -1){
@@ -47,6 +49,9 @@ function getSearchInput(datas) {
     temp=temp.filter(function(val){
         return !(!val || val === "");
     });
+
+
+
     temp.forEach(function(item,index){
         // 数组去重
         if ($.inArray(item.product, productArray) == -1) {
@@ -84,10 +89,22 @@ function getSearchInput(datas) {
 
 function tableHover(data){
     console.log($('#body'));
-    $('#body').delegate('tr','mouseenter',function(){
+    $('#body').delegate('tr','mouseenter',function(e){
         setSvg(data,$(this).index());
-        setCanvas(data,$(this).index());
+        setCanvas(data,$(this).index(),true);
+        e.preventDefault();
     });
+    $('#body').delegate('tr','mouseleave',function(e){
+        var c=document.getElementById("canvas");
+        c.height=c.height;
+        e.preventDefault();
+    });
+    // 多曲线
+    $('#body').mouseleave(function(){
+        for(var i=0;i<12;i++){
+            setCanvas(data,i,false);
+        }
+    })
 }
 
 // 拼接表格(没做简化 懒了= =)

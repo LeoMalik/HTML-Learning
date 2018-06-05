@@ -12,7 +12,8 @@
     <script src="checkbox.js"></script>
     <script src="table.js"></script>
     <script src="bar.js"></script>
-    <title>Document</title>
+    <script src="localStorge.js"></script>
+    <title>报表</title>
     <style>
         .wrapper {
             display: flex;
@@ -31,30 +32,34 @@
             width: 100px;
             margin: 20px auto;
         }
+        .charts{
+            display: flex;
+            justify-content: space-around;
+        }
     </style>
 </head>
 
 <body>
     <div class="wrapper">
         <div id="region">
-            <input type="checkbox" class="checkAll">
-            <span>全选</span>
-            <input type="checkbox" value='华东'>
-            <span>华东</span>
-            <input type="checkbox" value='华南'>
-            <span>华南</span>
-            <input type="checkbox" value='华北'>
-            <span>华北</span>
+            
+            <label><input type="checkbox" class="checkAll">全选</label>
+            
+            <label><input type="checkbox" value='华东'>华东</label>
+           
+            <label><input type="checkbox" value='华南'>华南</label>
+            
+            <label><input type="checkbox" value='华北'>华北</label>
         </div>
         <div id="product">
-            <input type="checkbox" class="checkAll">
-            <span>全选</span>
-            <input type="checkbox" value='手机'>
-            <span>手机</span>
-            <input type="checkbox" value='电脑'>
-            <span>电脑</span>
-            <input type="checkbox" value='音箱'>
-            <span>音箱</span>
+            
+            <label><input type="checkbox" class="checkAll">全选</label>
+            
+            <label><input type="checkbox" value='手机'>手机</label>
+            
+            <label><input type="checkbox" value='笔记本'>笔记本</label>
+            
+            <label><input type="checkbox" value='智能音箱'>智能音箱</label>
         </div>
     </div>
     <button class="btn btn-primary">查询</button>
@@ -78,10 +83,19 @@
                 <th>12月</th>
 
             </thead>
+
         </table>
     </div>
-    <!-- 必须写onload事件,否则获取不到document -->
-    <embed onload="RotateSVG()"  id="svg" src="bar.svg"  width="700" height="700" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/"/>
+    <div class="charts">
+        <svg id="svg" xmlns="http://www.w3.org/2000/svg" version="1.1" height="700" width="700">
+            <line x1="50" x2="50"  y1="50"  y2="650" stroke-width="2" style="stroke:black"/>
+            <line x1="50" x2="650" y1="650" y2="650" stroke-width="2" style="stroke:black"/>
+            <!-- 三角形箭头 -->
+            <path d="M60 60 L40 60 L50 40 Z"/>
+            <path d="M650 640 L650 660 L670 650 Z"/>
+        </svg>
+        <canvas id="canvas" width="700" height="700"></canvas>
+    </div>
     
 </body>
 

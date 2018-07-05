@@ -1,0 +1,3 @@
+
+
+![FireShot Capture 5 - Django 视图与网址进阶 - Django 教程 - 自强学堂_ - https___code.ziqiangxuetang.com_dja](D:\迅雷下载\FireShot\FireShot Capture 5 - Django 视图与网址进阶 - Django 教程 - 自强学堂_ - https___code.ziqiangxuetang.com_dja.png)![FireShot Capture 4 - Django URL name详_ - https___code.ziqiangxuetang.com_django_django-url-name.html](D:\迅雷下载\FireShot\FireShot Capture 4 - Django URL name详_ - https___code.ziqiangxuetang.com_django_django-url-name.html.png)

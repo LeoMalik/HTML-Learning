@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="example1">
+        <ul>
+            <li v-for="(item, index) in items" :key="item.id" v-on:click="greet(item)">{{item.name}}</li>
+        </ul>
+    </div>
+    <div id='example-3'>
+        <input type="checkbox" id="jack" value="Jack" v-model="Checked">
+        <label for="jack">Jack</label>
+        <input type="checkbox" id="john" value="John" v-model="Checked">
+        <label for="john">John</label>
+        <input type="checkbox" id="mike" value="Mike" v-model="Checked">
+        <label for="mike">Mike</label>
+        <br>
+        <span>Checked names: {{ Checked }}</span>
+    </div>
+    <div id="example-4">
+        <select v-model="selected">
+            <!-- 内联对象字面量 -->
+            <option v-bind:value="{ number: 123 }">123</option>
+        </select>
+        <input type="radio" v-model="pick" v-bind:value="a">
+    </div>
+
+</body>
+<script>
+    var vm = new Vue({
+        el: "#example1",
+        data: {
+            items: [{
+                id: 1,
+                name: 'leo'
+            }, {
+                id: 2,
+                name: 'jack'
+            }, {
+                id: 3,
+                name: 'rose'
+            }],
+            name: 'vuejs',
+        },
+        methods: {
+            greet: function (item) {
+                alert('hello' + this.name + ',' + item.name)
+            }
+        }
+    })
+    new Vue({
+        el: '#example-3',
+        data: {
+            Checked: []
+        }
+    })
+    
+</script>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app" v-on:click="add_a">
+        a={{a}} b={{b}} {{message}}
+        <input type="text" v-model="message">
+
+
+    </div>
+    <div id="app2">
+        <ol>
+            <todo-item v-for="item in todo_list" :todo="item" :key="item.id"></todo-item>
+        </ol>
+    </div>
+</body>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            a: 1,
+            message: 'Hello VUE'
+        },
+        computed: {
+            b: function () {
+                return this.a + 1
+            }
+        },
+        methods: {
+            add_a() {
+                this.a = this.a + 10
+            }
+        }
+    })
+
+    Vue.component('todo-item', {
+        props: ['todo'],
+        template: '<li>{{todo.text}}</li>',
+    })
+    var vm2 = new Vue({
+        el: '#app2',
+        data: {
+            todo_list: [{
+                    id: 0,
+                    text: 'item0'
+                },
+                {
+                    id: 1,
+                    text: 'item1'
+                },
+                {
+                    id: 2,
+                    text: 'item2'
+                },
+            ]
+        }
+    })
+    
+</script>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .active {
+            color: red
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app" :class="active">
+        <p>{{ message.toLowerCase() | myfilter | to_uppercase }}</p>
+    </div>
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello World!',
+            active: 'active'
+        },
+        filters: {
+            myfilter(value) {
+                return value.split('').reverse().join('');
+            },
+            to_uppercase(value) {
+                return value.toUpperCase();
+            }
+        }
+    })
+</script>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <link rel="stylesheet" href="D:\animated.css\animated.css">
+    <style>.fade-enter-active, .fade-leave-active {
+            transition: opacity .5s;
+          }
+          .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+            
+              opacity: 0;
+          }</style>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" @keyup.enter="add" v-model='val'>
+        
+            <todolist :todos="todos" @del='del'>
+                <template slot-scope="slotProps">
+                    <span v-if="slotProps.todo.iscompelete">√ </span>
+                    {{slotProps.todo.text}}
+                    </span>
+                </template>
+            </todolist>
+        
+    </div>
+
+    <div id="app1">
+        <button @click="show = !show">show</button>
+        <transition name="fade">
+            <p v-if="show">hello world </p>
+        </transition>
+    </div>
+</body>
+<script>
+    new Vue({
+        el:'#app1',
+        data:{
+            show:false
+        }
+    })
+
+
+    // todolist
+    var count=0;
+    Vue.component("todolist", {
+        props: ["todos"],
+        data: function () {
+            return {
+                selfTodos: this.todos
+            }
+        },
+
+        template: `<ul> 
+                <transition-group name="fade" enter-active-class="animated lightSpeedIn"
+                leave-active-class="animated zoomOut"
+                appear-active-class="animated zoomIn"
+                appear>
+                    <li v-for='(todo,index) in selfTodos' :key=todo.id>
+                        <slot :todo='todo'>
+                            
+                        </slot>
+                        <button @click='handleclick(index)'>del</button>
+                    </li>
+                </transition-group >
+                  </ul>`,
+        methods: {
+            handleclick(index) {
+                this.$emit('del', index)
+            }
+        }
+    })
+    new Vue({
+        el: "#app",
+        data: {
+            val: '',
+            todos: [],
+        },
+        methods: {
+            add() {
+                temp = {
+                    id:count++,
+                    text: this.val,
+                    iscompelete: true,
+                }
+                this.todos.unshift(temp);
+                this.val = '';
+            },
+            del(index) {
+                this.todos.splice(index, 1)
+            }
+        }
+    })
+</script>
+
+</html>

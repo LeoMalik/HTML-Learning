@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <link rel="stylesheet" href="D:\animated.css\animated.css">
+</head>
+<body>
+    <div id="app">
+        <transition name="fade" enter-active-class="animated rubberBand"
+                                leave-active-class="animated zoomOut"
+                                appear
+                                appear-active-class="animated zoomIn">
+                <div v-if="show" style="width: 200px;height: 100px;background: red">Hello world</div>
+        </transition>
+        <button @click="handleClick">toggle</button>
+    </div>
+</body>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            show:true
+        },
+        methods:{
+           handleClick() {
+                this.show = !this.show
+            }
+        }
+    })
+</script>
+</html>

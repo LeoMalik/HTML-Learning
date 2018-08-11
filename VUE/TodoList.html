@@ -1,10 +1,121 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 </head>
+
 <body>
-$END$
+    <div id="app">
+        <input type="text" v-model="val" @keyup.enter="add">
+        <ul>
+            <todo-item :content="item" :index="index" v-for="(item,index) in arr" 
+                        @delete="remove"></todo-item>
+        </ul>
+    </div>
+    <div id="app1">
+        <counter ref='one' :count="1" @change="handleChange"></counter>
+        <counter ref='two' :count="2" @change="handleChange"></counter>
+        <div>{{total}}</div>
+    </div>
+    <div id="app2">
+        <name content="dell"></name>
+        <name content="hp"></name>
+    </div>
+    <script>
+        let vm = new Vue({
+            el: '#app',
+            data: {
+                arr: [],
+                val: ''
+            },
+            methods: {
+                add(e) {
+                    this.arr.unshift(this.val);
+                    this.val = ''
+                },
+                remove(i) {
+                    this.arr.splice(i, 1)
+                }
+            }
+        })
+
+        Vue.component("TodoItem", {
+            props: ['content', 'index'],
+            template: "<li @click='handleItemClick'>{{content}}</li>",
+            methods: {
+                handleItemClick: function () {
+                    this.$emit("delete", this.index);
+                }
+            }
+        })
+
+
+
+        //
+        Vue.component("counter", {
+            props: ["count"],
+            data: function () {
+                return {
+                    number: this.count
+                }
+            },
+            template: "<div @click='add'>{{number}}</div>",
+            methods: {
+                add() {
+                    this.number++;
+                    this.$emit('change');
+                }
+            }
+        })
+
+        new Vue({
+            el: '#app1',
+            data: {
+                total: 0
+            },
+            methods: {
+                handleChange: function () {
+                    this.total = this.$refs.one.number + this.$refs.two.number;
+                }
+            }
+        })
+
+
+        //
+        Vue.prototype.bus = new Vue()
+        Vue.component("name", {
+            props: {
+                content: {
+                    type: String
+                }
+            },
+            data: function () {
+                return {
+                    self_name: this.content
+                }
+            },
+            template: "<div @click='handleClick'>{{self_name}}</div>",
+            methods: {
+                handleClick: function () {
+                    this.bus.$emit('change', this.self_name)
+                }
+            },
+            mounted: function () {
+                var _this = this;
+                this.bus.$on('change', function (name) {
+                    _this.self_name = name
+                })
+            },
+        })
+        new Vue({
+            el: "#app2"
+        })
+    </script>
 </body>
+
 </html>

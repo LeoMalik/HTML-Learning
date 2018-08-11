@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            display: block;
+            float: left;
+            width: 70px;
+            height: 30px;
+            background-color: aqua;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        #app {
+            text-align: center;
+            margin: 0 auto;
+            width: 280px;
+            height: 400px;
+            background-color: aliceblue
+        }
+    </style>
+</head>
+
+<body>
+<div id="app">
+    <div class="banner">
+        <ul>
+            <li v-for="(a,index) in b_list" @click="menu(index)">{{a}}</li>
+        </ul>
+    </div>
+    <div class="content">
+        {{content}}
+    </div>
+</div>
+</body>
+<script>
+    let vm = new Vue({
+        el:'#app',
+        data: {
+            b_list: ["html",'css','js','vue'],
+            c_data:['html_content','css_content','js_content','vue_content'],
+            content:'html_content'
+        },
+        methods:{
+            menu(index){
+                this.content=this.c_data[index]
+            }
+        }
+    })
+</script>
+</html>
